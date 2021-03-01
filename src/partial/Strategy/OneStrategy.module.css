@@ -1,0 +1,132 @@
+.container {
+    background: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 100%;
+    color: #9cb0d4;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    transition: all 0.4s;
+    height: 60px;
+    position: relative;
+}
+
+.wrapper {
+    overflow: hidden;
+    height: 100%;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container h3, .container i {
+    font-size: 19px;
+}
+
+
+.pagination {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    display: flex;
+    flex-direction: column;  
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation-name: fade;
+    animation-delay: 0.5s;
+}
+
+
+.pagination span {
+    display: block;
+    padding: 12px;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
+    background: #e7effc;
+    color: #9cb0d4;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.pagination span i {
+    font-size: 16px;
+}
+
+.pagination span:hover {
+    background: #dfeafd;
+}
+
+
+.pagination span:first-child::before {
+    content: "";
+    background: #8499c0;
+    width: 25%;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    clip-path: polygon(100% 68%, 0% 100%, 100% 100%);
+}
+
+.pagination span:first-child {
+    animation: fade 0.2s linear 0.5s forwards;
+    border-top-right-radius: 5px;
+}
+
+.pagination span:nth-child(2) {
+    animation: fade 0.2s linear 0.7s forwards;
+
+}
+
+.pagination span:nth-child(3) {
+    animation: fade 0.2s linear 0.9s forwards;
+
+}
+
+.pagination span:last-child {
+    animation: fade 0.2s linear 1.1s forwards;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/*******************/
+/***** DARKMODE ****/
+/*******************/
+
+.container.dark {
+    background: #2e2e3d;
+    color: #f3f1ff;
+}
+
+.container.dark .pagination span {
+    background: #47475D;
+    color: #f3f1ff;
+    border-bottom: 1px solid #2e2e3d;
+}
+
+
+.container.dark .pagination span:hover {
+    background: #52526b;
+}
+

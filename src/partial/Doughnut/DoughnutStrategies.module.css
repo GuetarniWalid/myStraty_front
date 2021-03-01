@@ -1,0 +1,27 @@
+.container {
+    background: #fff;
+    padding: 20px 0 0;
+    text-align: center;
+}
+
+.container span {
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #9cb0d4;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/**********************/
+/******* DARKMODE *****/
+/**********************/
+
+.container.dark {
+    background: #2e2e3d;
+}
+
+.container.dark span {
+    color: #f3f1ff;
+}

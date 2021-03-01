@@ -1,0 +1,12 @@
+.container {
+  height: calc(100vh - 70px - 140px);
+  overflow-y: scroll;
+  padding-top: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .container {
+    height: calc(100vh - 130px);
+  }
+}
+

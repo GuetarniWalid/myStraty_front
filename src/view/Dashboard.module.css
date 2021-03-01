@@ -1,0 +1,17 @@
+.container {
+    padding: 30px 5%;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+

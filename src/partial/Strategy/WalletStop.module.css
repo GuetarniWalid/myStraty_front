@@ -1,0 +1,94 @@
+.container {
+    padding-bottom: 30px;
+}
+
+.container>p {
+    margin-bottom: 0;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.exchange {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.exchange button {
+    background: #e7effc;
+    border-radius: 5px;
+    padding: 7px 15px;
+    color: #3276eb;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.exchange button:hover {
+    background: #dfeafd;
+}
+
+.wrapperCurrency {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftWrapperCurrency p {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+
+.stopButton {
+    background: #f8d7da;
+    color: #842029;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.stopButton:hover {
+    background: #fbd3d6;
+    color: #81161f;
+}
+
+
+@media screen and (max-width: 500px ) {
+    .exchange {
+        justify-content: flex-start;
+    }
+
+    .exchange button {
+        width: 100%;
+    }
+
+    .stopButton {
+        width: 100%;
+        margin-top: 20px;
+
+    }
+}
+
+/*****************/
+/***** DARKMODE **/
+/*****************/
+
+.container.dark .exchange button {
+    background: #47475D;
+    color: #7db7dc;
+}
+
+.container.dark .exchange button:hover {
+    background: #4c4c64;
+}

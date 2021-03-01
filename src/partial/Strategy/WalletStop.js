@@ -1,0 +1,102 @@
+import React, { useContext } from 'react';
+import { RefreshStrategyContext } from '../Providers';
+import { AlertContext } from '../Providers';
+import { RateContext } from '../Providers';
+import styles from './WalletStop.module.css';
+import {formatCurrency} from '../../functions/various'
+import useFetch from '../../hooks/useFetch'
+import {DarkContext} from '../Providers'
+
+export default function WalletStop({ userStrategy, setSrategyStarted, setUserStrategy, setPercentButton, strategy, exchange, changeExchange }) {
+  const { setRefresh } = useContext(RefreshStrategyContext);
+  const { darkMode } = useContext(DarkContext);
+  const { setCard } = useContext(AlertContext);
+  const { rate } = useContext(RateContext);
+  const execute = useFetch()
+
+  async function stopStrategy(e) {
+    e.preventDefault();
+    try {
+      const json = await execute(`${process.env.REACT_APP_URL_BACK}/api/v1/strategies/user/stop/${userStrategy.id}`);
+      const success = json.success;
+      if (success) {
+        setSrategyStarted();
+        setUserStrategy();
+        setRefresh(count => ++count);
+        setPercentButton();
+        setCard({
+          title: `Strategie stoppé !`,
+          text: `La strategie ${strategy.title} a été stoppé sur ${exchange.name}.
+              Vous pouvez redémarrer la strategie à tout moment en cliquant sur "Lancer".`,
+          type: 'success',
+          time: 15000,
+        });
+      }
+    }
+    catch(e) {
+      console.log(e.message)
+    }
+  }
+
+  //calculate position of each currency in percent
+  const position = JSON.parse(userStrategy.position);
+  //transform in percent
+  const btcPositionInPercent = position.BTC ? position.BTC * 100 : 0;
+  const ethPositionInPercent = position.ETH ? position.ETH * 100 : 0;
+  const usdPositionInPercent = position.USDT ? position.USDT * 100 : 0;
+  const positions = {
+    USDT: usdPositionInPercent + '%',
+    ETH: ethPositionInPercent + '%',
+    BTC: btcPositionInPercent + '%',
+  };
+
+  //calculate the amount total allocated to the strategy
+  let total = 0;
+  total += userStrategy.usdt
+  total += userStrategy.btc * rate.BTCUSDT
+  total += userStrategy.eth * rate.ETHUSDT
+  total = formatCurrency(total, 'usd')
+
+  
+
+  return (
+    <div className={darkMode ? `${styles.container} ${styles.dark}` : styles.container}>
+      <div className={styles.exchange}>
+        <button onClick={e => changeExchange(e, 'binance')}>Binance</button>
+      </div>
+      <p>Montant sous gestion : <span style={darkMode ? {color: '#7db7dc'} : {color: '#3276eb'}}>$ {total}</span></p>
+      <div className={styles.wrapperCurrency}>
+        <div>
+          <div>
+            <p style={usdPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>USD : {formatCurrency(userStrategy.usdt, 'usdt')} $</p>
+            <p style={btcPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>BTC : {formatCurrency(userStrategy.btc, 'btc')} ฿</p>
+            <p style={ethPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>ETH : {formatCurrency(userStrategy.eth, 'eth')} Ξ</p>
+          </div>
+        </div>
+        <div>
+          <div className={styles.leftWrapperCurrency}>
+            <p>
+              <span style={usdPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null} >En USD : </span>
+              <span style={usdPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>{positions.USDT}</span>
+            </p>
+            <p>
+              <span style={btcPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>En BTC : </span>
+              <span style={btcPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>{positions.BTC}</span>
+            </p>
+            <p>
+              <span style={ethPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>En ETH : </span>
+              <span style={ethPositionInPercent ? darkMode ? {color: '#7db7dc'} : {color: '#3276eb'} : null}>{positions.ETH}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div className={styles.bottomContainer}>
+          <button className={styles.stopButton} onClick={stopStrategy}>
+            Arrêter
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}

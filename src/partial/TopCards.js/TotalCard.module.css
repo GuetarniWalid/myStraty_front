@@ -1,0 +1,46 @@
+.container {
+    background: #fff;
+    width: 230px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 25px;
+    box-shadow: 0px 10px 30px 0px rgba(83, 99, 134, 0.2);
+    cursor: pointer;
+}
+
+.container span {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 10px;
+    margin-left: 15px;
+}
+
+.container small {
+    font-size: 9px;
+    color: #9CB0D4;
+}
+
+.container img {
+    width: 25px;
+}
+
+/*************************/
+/****** DARKMODE *********/
+/*************************/
+
+.container.dark {
+    background: #2e2e3d;
+    box-shadow: unset;
+
+}
+
+.container.dark span {
+    color: #f3f1ff;
+}
+
+.container.dark small {
+    color: #f3f1ff;
+}

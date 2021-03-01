@@ -1,0 +1,46 @@
+.container {
+    padding: 50px 5% 0;
+}
+
+.container>div:first-child {
+    display: flex;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+.questions {
+    margin-top: 40px;
+    color: #2252a5
+}
+
+.questions ul {
+    padding: 0;
+    padding-bottom: 400px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.questions ul li:last-child{
+    margin-bottom: 0;
+}
+
+.questions ul li:last-child p:first-child::after {
+    content: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container>div:first-child {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+}
+
+/********************/
+/******* DARKMODE ***/
+/********************/
+
+.container.dark .questions {
+    color: #7db7dc
+}

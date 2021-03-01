@@ -1,0 +1,17 @@
+.chart {
+    box-sizing: border-box;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0;
+    position: relative;
+}
+
+
+/*************************/
+/******* DARKMODE ********/
+/*************************/
+
+.chart.dark {
+    background: #2e2e3d;
+}

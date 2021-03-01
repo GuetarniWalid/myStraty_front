@@ -1,0 +1,59 @@
+.container{
+  width: 650px;
+  margin-bottom: 50px;
+}
+
+.h3 {
+  font-size: 15px;
+}
+
+.headerContainer {
+  border-top-left-radius : 5px;
+  border-top-right-radius : 5px;
+}
+
+.containerDoughnut {
+  background: #fff;
+  border-bottom-left-radius : 5px;
+  border-bottom-right-radius : 5px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .container{
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1575px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .containerDoughnut{
+    display: block;
+  }
+
+  .containerDoughnut>div{
+    width: 310px;
+    margin: 0 auto;
+  }
+}
+
+
+/*************************/
+/******** DARKMODE *******/
+/*************************/
+
+.container.dark .containerDoughnut {
+  background: #2e2e3d;
+}

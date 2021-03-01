@@ -1,0 +1,72 @@
+.container {
+    margin: 30px 10px;
+}
+
+.container>div {
+    position: relative;
+    width: 100%;
+}
+
+.container label {
+    font-weight: 600;
+    position: absolute;
+    transition: 0.2s;
+    left: 0;
+}
+
+
+.container input {
+    color: rgba(34, 34, 34, 0.85);
+    border: none;
+    height: 30px;
+    width: 100%;
+}
+
+.container input:focus+span {
+    background: #75a3f3;
+    height: 2px;
+}
+
+.container span {
+    display: block;
+    height: 1px;
+    background: #9cb0d4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.2s;
+}
+
+.container small {
+    margin: 0;
+    color: crimson;
+}
+
+/******** DARKMODE ********/
+
+.container.dark input {
+    color: #f3f1ff;
+    background: transparent;
+}
+
+.container.dark input:focus+span {
+    background: #7db7dc;
+}
+
+.container.dark label {
+    color: #7db7dc!important;
+}
+
+.container.dark small {
+    margin: 0;
+    color: rgb(252, 161, 161);
+}
+
+/* Change Autocomplete styles in Chrome*/
+.container.dark input:-webkit-autofill,
+.container.dark input:-webkit-autofill:hover, 
+.container.dark input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f3f1ff;
+  transition: background-color 5000s ease-in-out 0s;
+}

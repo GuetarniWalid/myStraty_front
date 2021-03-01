@@ -1,0 +1,91 @@
+.li {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.li>p:first-child {
+    padding-left: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 25px;
+    margin: 0;
+    position: relative;
+}
+
+.li>p:first-child::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: #2252a531;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transform: translateY(25px);
+}
+
+
+
+.li>p:first-child i {
+    animation: show 3s ease infinite;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(0);
+    }
+    37%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    73%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.response {
+    line-height: 24px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transform: translateY(calc(100% - 50px)) scaleY(0);
+    opacity: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: absolute;
+    background: #F3F7FD;
+    z-index: 10;
+    padding: 30px;
+    bottom: 0;
+    margin: 0;
+}
+
+.response i {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.show {
+    transform: translateY(100%) scaleY(1);
+    opacity: 1;
+}
+
+
+/*********************/
+/******* DARKMODE ****/
+/*********************/
+
+.li.dark>p:first-child::after {
+    background: #5d5d79;
+}
+
+.li.dark .response {
+    background: #47475D;
+}
+

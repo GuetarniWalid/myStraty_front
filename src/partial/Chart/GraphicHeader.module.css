@@ -1,0 +1,22 @@
+.h4 {
+    background: #E9F0FB;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+    color: #9CB0D4;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+    width: 50%;
+    cursor: pointer;
+}
+
+/**********************/
+/****** DARKMODE ******/
+/**********************/
+
+.h4.dark {
+    background: #47475D;
+    color: #f3f1ff;
+}

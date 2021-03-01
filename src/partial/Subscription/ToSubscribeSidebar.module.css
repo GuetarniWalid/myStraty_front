@@ -1,0 +1,248 @@
+.container {
+  width: 180px;
+  margin: 0 auto 10px;
+  text-align: center;
+  padding-bottom: 14px;
+  border-radius: 5px;
+}
+
+.container + a {
+  text-align: center;
+  width: 180px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+/****** PROGRESSBAR ******/
+.container progress {
+  border: none;
+  background: #e7effc;
+  border-radius: 9999px;
+  height: 8px;
+  width: 90%;
+}
+
+.container progress::-webkit-progress-value {
+  border-radius: 9999px;
+}
+
+.container progress::-moz-progress-value {
+  border-radius: 9999px;
+}
+
+.container progress::-webkit-progress-bar {
+  border-radius: 9999px;
+  background: #e7effc;
+}
+
+/****** TESTER ******/
+
+.tester {
+  border: 2px solid #e7effc;
+  color: unset;
+}
+
+.tester + a {
+  background: #e7effc;
+}
+
+.tester + a:hover {
+  background: #dee6f5;
+}
+
+.tester span {
+  color: #3276eb;
+}
+
+
+/*** TESTER DARKMODE *****/
+.tester.dark span {
+  color: #7DB7DC;
+}
+
+.tester.dark + a {
+  background: linear-gradient(to right, #3A3A4D 0%, #49495F 100%);
+  color: #f3f1ff;
+}
+
+.tester.dark + a:hover {
+  background: linear-gradient(to right, #3c3c50 0%, #55556e 100%);
+}
+
+/****** PROGRESSBAR TESTER ******/
+
+.tester progress {
+  background: linear-gradient(to right, rgba(1, 203, 254, 1) 0%, rgba(30, 73, 227, 1) 100%);
+  background: #e7effc;
+}
+
+.tester progress::-webkit-progress-value {
+  background: linear-gradient(to right, rgba(1, 203, 254, 1) 0%, rgba(30, 73, 227, 1) 100%);
+}
+
+.tester progress::-moz-progress-value {
+  background: linear-gradient(to right, rgba(1, 203, 254, 1) 0%, rgba(30, 73, 227, 1) 100%);
+}
+
+/****** PROGRESSBAR TESTER DARKMODE ******/
+.tester.dark progress {
+  background: linear-gradient(to right, #7DB7DC 0%, #0689da 100%);
+  background: #f3f1ff;
+}
+
+.tester.dark progress::-webkit-progress-value {
+  background: linear-gradient(to right, #7DB7DC 0%, #0689da 100%);
+}
+
+.tester progress::-moz-progress-value {
+  background: linear-gradient(to right, #7DB7DC 0%, #0689da 100%);
+}
+
+/****** GOLD ******/
+.gold {
+  border: 2px solid rgb(246, 183, 62);
+  color: unset;
+}
+
+.gold + a:hover {
+  background: rgb(250, 175, 36);
+}
+
+.gold span {
+  color: rgb(228, 168, 56);
+}
+
+.gold + a {
+  background: rgb(246, 183, 62);
+  color: #fff;
+}
+
+/****** PROGRESSBAR ******/
+.gold progress {
+  background: linear-gradient(to right, rgb(252, 239, 188) 0%, rgb(246, 183, 62) 100%);
+}
+
+.gold progress::-webkit-progress-value {
+  background: linear-gradient(to right, rgb(252, 239, 188) 0%, rgb(246, 183, 62) 100%);
+}
+
+.gold progress::-moz-progress-value {
+  background: linear-gradient(to right, rgb(252, 239, 188) 0%, rgb(246, 183, 62) 100%);
+}
+
+/****** SILVER ******/
+.silver {
+  border: 2px solid rgb(0, 182, 200);
+  color: unset;
+}
+
+.silver + a:hover {
+  background: rgb(10, 205, 223);
+}
+
+.silver span {
+  color: rgb(0, 182, 200);
+}
+
+.silver + a {
+  background:rgb(0, 182, 200);
+  color: #fff;
+}
+/****** PROGRESSBAR ******/
+.silver progress {
+  background: linear-gradient(to right, rgb(237, 250, 255) 0%, rgb(0, 182, 200) 100%);
+}
+
+.silver progress::-webkit-progress-value {
+  background: linear-gradient(to right, rgb(237, 250, 255) 0%, rgb(0, 182, 200) 100%);
+}
+
+.silver progress::-moz-progress-value {
+  background: linear-gradient(to right, rgb(237, 250, 255) 0%, rgb(0, 182, 200) 100%);
+}
+
+/****** BRONZE ******/
+.bronze {
+  border: 2px solid rgb(19, 187, 112);
+  color: unset;
+}
+
+.bronze + a:hover {
+  background: rgb(25, 197, 120);
+}
+
+.bronze span {
+  color: rgb(19, 187, 112);
+}
+
+.bronze + a {
+  background: rgb(19, 187, 112);
+  color: #fff;
+}
+/****** PROGRESSBAR ******/
+.bronze progress {
+  background: linear-gradient(to right, rgb(218, 252, 235) 0%, rgb(19, 187, 112) 100%);
+}
+
+.bronze progress::-webkit-progress-value {
+  background: linear-gradient(to right, rgb(218, 252, 235) 0%, rgb(19, 187, 112) 100%);
+}
+
+.bronze progress::-moz-progress-value {
+  background: linear-gradient(to right, rgb(218, 252, 235) 0%, rgb(19, 187, 112) 100%);
+}
+
+
+/****** EXPIRY ******/
+
+.expiry {
+  border: 2px solid #f5c2c7;
+  padding-bottom: 0;
+}
+
+.expiry span {
+  color: #842029;
+}
+
+.expiry + a {
+  background: #fcd8db;
+  color: #842029;
+}
+
+.expiry + a:hover {
+  background:  #fdcccf;
+}
+
+/*********************/
+/******* DARKMODE ****/
+/*********************/
+
+/****** PROGRESSBAR ******/
+.container.dark progress {
+  background: #47475D;
+}
+
+.container.dark progress::-webkit-progress-bar {
+  background: #47475D;
+}
+
+.container.dark.gold + a {
+  /* background: rgb(246, 183, 62); */
+  color: #2e2e3d;
+}
+
+.container.dark.bronze + a {
+  color: #2e2e3d;
+}
+
+.container.dark.silver + a {
+  color: #2e2e3d;
+}
+
+

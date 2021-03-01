@@ -1,0 +1,1889 @@
+[
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1145858975,
+        "orderListId": -1,
+        "clientOrderId": "KcD87rRFK1aOhG90f1tOHM",
+        "price": "0.00000000",
+        "origQty": "17.04000000",
+        "executedQty": "17.04000000",
+        "cummulativeQuoteQty": "3763.00347570",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1590795903704,
+        "updateTime": 1590795903704,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1250137279,
+        "orderListId": -1,
+        "clientOrderId": "COvIYHEgegJ9n4xslIGnB6",
+        "price": "0.00000000",
+        "origQty": "16.70100000",
+        "executedQty": "16.70100000",
+        "cummulativeQuoteQty": "3823.22825960",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592610305464,
+        "updateTime": 1592610305464,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1332484008,
+        "orderListId": -1,
+        "clientOrderId": "cPh14PcZSZZ8r0VWm8E3u6",
+        "price": "0.00000000",
+        "origQty": "15.80200000",
+        "executedQty": "15.80200000",
+        "cummulativeQuoteQty": "3816.84609980",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1594424706399,
+        "updateTime": 1594424706399,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1354461575,
+        "orderListId": -1,
+        "clientOrderId": "m8Pog3ZVHICL5ZkEjYcuSd",
+        "price": "0.00000000",
+        "origQty": "15.78600000",
+        "executedQty": "15.78600000",
+        "cummulativeQuoteQty": "3672.98956890",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1595029504799,
+        "updateTime": 1595029504799,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1380503155,
+        "orderListId": -1,
+        "clientOrderId": "kCRtI3RNYAyTMVmpUVYQ9v",
+        "price": "0.00000000",
+        "origQty": "13.12400000",
+        "executedQty": "13.12400000",
+        "cummulativeQuoteQty": "3658.42330770",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1595634304433,
+        "updateTime": 1595634304433,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1614675970,
+        "orderListId": -1,
+        "clientOrderId": "Jy9uuK3nfErtFnd79kR1em",
+        "price": "0.00000000",
+        "origQty": "12.73000000",
+        "executedQty": "12.73000000",
+        "cummulativeQuoteQty": "5042.48030000",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1598658307095,
+        "updateTime": 1598658307095,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1656655981,
+        "orderListId": -1,
+        "clientOrderId": "JDji62zuZOMhfkf59KezGE",
+        "price": "0.00000000",
+        "origQty": "6.50700000",
+        "executedQty": "6.50700000",
+        "cummulativeQuoteQty": "2486.24421200",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1599176705505,
+        "updateTime": 1599176705505,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHUSDT",
+        "orderId": 1664185243,
+        "orderListId": -1,
+        "clientOrderId": "ivRMreNz6M9AFX9bVq37eV",
+        "price": "0.00000000",
+        "origQty": "6.50000000",
+        "executedQty": "6.50000000",
+        "cummulativeQuoteQty": "2521.02500070",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1599263106486,
+        "updateTime": 1599263106486,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    }
+]
+
+[
+    {
+        "symbol": "BTCUSDT",
+        "orderId": 2260679362,
+        "orderListId": -1,
+        "clientOrderId": "ePOc0bMmgFwKxgZfZ71Vyi",
+        "price": "0.00000000",
+        "origQty": "0.12634000",
+        "executedQty": "0.12634000",
+        "cummulativeQuoteQty": "1145.11223981",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1590104703676,
+        "updateTime": 1590104703676,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "orderId": 2273693189,
+        "orderListId": -1,
+        "clientOrderId": "8nIbVcMuNOsymb1On5p9Ql",
+        "price": "0.00000000",
+        "origQty": "0.41110200",
+        "executedQty": "0.41110200",
+        "cummulativeQuoteQty": "3767.83616142",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1590191103547,
+        "updateTime": 1590191103547,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "orderId": 3280083629,
+        "orderListId": -1,
+        "clientOrderId": "f54GWBPOOAydJsbVC3S3gf",
+        "price": "0.00000000",
+        "origQty": "0.47622200",
+        "executedQty": "0.47622200",
+        "cummulativeQuoteQty": "5085.47473138",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1601077504771,
+        "updateTime": 1601077504771,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "orderId": 3315584907,
+        "orderListId": -1,
+        "clientOrderId": "QsC2BcxVOrSrHbm1cz4zQS",
+        "price": "0.00000000",
+        "origQty": "0.47747700",
+        "executedQty": "0.47747700",
+        "cummulativeQuoteQty": "5040.23952767",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1601682304129,
+        "updateTime": 1601682304129,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "BTCUSDT",
+        "orderId": 3343965707,
+        "orderListId": -1,
+        "clientOrderId": "JzHJyZiSo5KTDopQS9sjNt",
+        "price": "0.00000000",
+        "origQty": "0.45450500",
+        "executedQty": "0.45450500",
+        "cummulativeQuoteQty": "5027.28435005",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1602287104275,
+        "updateTime": 1602287104275,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    }
+]
+
+[
+    {
+        "symbol": "ETHBTC",
+        "orderId": 679979225,
+        "orderListId": -1,
+        "clientOrderId": "web_e5beb03deb874dc8a604b1d507345005",
+        "price": "0.02293800",
+        "origQty": "1.42400000",
+        "executedQty": "1.42400000",
+        "cummulativeQuoteQty": "0.03266369",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "LIMIT",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1586527605752,
+        "updateTime": 1586527608046,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 749867822,
+        "orderListId": -1,
+        "clientOrderId": "S9tor79eUC8ggiiuMT4pG8",
+        "price": "0.00000000",
+        "origQty": "16.88400000",
+        "executedQty": "16.88400000",
+        "cummulativeQuoteQty": "0.42080348",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1591400703796,
+        "updateTime": 1591400703796,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 752164710,
+        "orderListId": -1,
+        "clientOrderId": "swEoBrhCf1rSniCN0WOKQ5",
+        "price": "0.00000000",
+        "origQty": "4.12000000",
+        "executedQty": "4.12000000",
+        "cummulativeQuoteQty": "0.10316651",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1591573503150,
+        "updateTime": 1591573503150,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 754141243,
+        "orderListId": -1,
+        "clientOrderId": "dQlpUa5c5P8XqiY9yPt17a",
+        "price": "0.00000000",
+        "origQty": "8.38500000",
+        "executedQty": "8.38500000",
+        "cummulativeQuoteQty": "0.20935062",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1591746306038,
+        "updateTime": 1591746306038,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 757864250,
+        "orderListId": -1,
+        "clientOrderId": "r9dPmEGgztHc9isXJmLYGn",
+        "price": "0.00000000",
+        "origQty": "8.21400000",
+        "executedQty": "8.21400000",
+        "cummulativeQuoteQty": "0.20586132",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592005505782,
+        "updateTime": 1592005505782,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 760600183,
+        "orderListId": -1,
+        "clientOrderId": "ogxsA17EP6kAE356rEwrdQ",
+        "price": "0.00000000",
+        "origQty": "8.29600000",
+        "executedQty": "8.29600000",
+        "cummulativeQuoteQty": "0.20632980",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592178304512,
+        "updateTime": 1592178304512,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 762499332,
+        "orderListId": -1,
+        "clientOrderId": "VK2f5AhmYKghN9quZrBmEj",
+        "price": "0.00000000",
+        "origQty": "8.43600000",
+        "executedQty": "8.43600000",
+        "cummulativeQuoteQty": "0.20656714",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592264705848,
+        "updateTime": 1592264705848,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 764163042,
+        "orderListId": -1,
+        "clientOrderId": "aWPJcHJKkmD8D5AJ1LqHfk",
+        "price": "0.00000000",
+        "origQty": "8.28800000",
+        "executedQty": "8.28800000",
+        "cummulativeQuoteQty": "0.20459756",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592351106148,
+        "updateTime": 1592351106148,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 767350670,
+        "orderListId": -1,
+        "clientOrderId": "lQGUeF9OnaaOFAqKmw1uRM",
+        "price": "0.00000000",
+        "origQty": "8.43000000",
+        "executedQty": "8.43000000",
+        "cummulativeQuoteQty": "0.20795588",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1592523906777,
+        "updateTime": 1592523906777,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 823103644,
+        "orderListId": -1,
+        "clientOrderId": "GO2EEmCePgRHUJV9GDQwvC",
+        "price": "0.00000000",
+        "origQty": "6.48500000",
+        "executedQty": "6.48500000",
+        "cummulativeQuoteQty": "0.18964085",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1595893567714,
+        "updateTime": 1595893567714,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 825514697,
+        "orderListId": -1,
+        "clientOrderId": "C2eh1aLQ5oDorznkUNOxcG",
+        "price": "0.00000000",
+        "origQty": "6.62600000",
+        "executedQty": "6.62600000",
+        "cummulativeQuoteQty": "0.19244883",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1595979904759,
+        "updateTime": 1595979904759,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 829417885,
+        "orderListId": -1,
+        "clientOrderId": "6MDb4K4NLtn2DuWEgHMClC",
+        "price": "0.00000000",
+        "origQty": "12.61000000",
+        "executedQty": "12.61000000",
+        "cummulativeQuoteQty": "0.38060393",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1596152704727,
+        "updateTime": 1596152704727,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 846526097,
+        "orderListId": -1,
+        "clientOrderId": "GNfRZdataB27od7SQPLzNi",
+        "price": "0.00000000",
+        "origQty": "12.59700000",
+        "executedQty": "12.59700000",
+        "cummulativeQuoteQty": "0.42112843",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1596757504437,
+        "updateTime": 1596757504437,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 850273876,
+        "orderListId": -1,
+        "clientOrderId": "Cfv0uyuAJ5uIHAwaXQXuM6",
+        "price": "0.00000000",
+        "origQty": "6.15000000",
+        "executedQty": "6.15000000",
+        "cummulativeQuoteQty": "0.20791919",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1596931641848,
+        "updateTime": 1596931641848,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 853798384,
+        "orderListId": -1,
+        "clientOrderId": "QnO7TkszJNW6sK6g3blyc8",
+        "price": "0.00000000",
+        "origQty": "6.39600000",
+        "executedQty": "6.39600000",
+        "cummulativeQuoteQty": "0.21275014",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1597103105472,
+        "updateTime": 1597103105472,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 855932651,
+        "orderListId": -1,
+        "clientOrderId": "8tn8oC6lxlrHQwwrDi806C",
+        "price": "0.00000000",
+        "origQty": "6.19700000",
+        "executedQty": "6.19700000",
+        "cummulativeQuoteQty": "0.20635390",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1597189504792,
+        "updateTime": 1597189504792,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 857863348,
+        "orderListId": -1,
+        "clientOrderId": "RsD3xYwa4qcKTWF8IwnskG",
+        "price": "0.00000000",
+        "origQty": "6.15800000",
+        "executedQty": "6.15800000",
+        "cummulativeQuoteQty": "0.20600149",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1597275905407,
+        "updateTime": 1597275905407,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 868881722,
+        "orderListId": -1,
+        "clientOrderId": "MEBkoLzs7PRfsskX8DeXBg",
+        "price": "0.00000000",
+        "origQty": "12.48900000",
+        "executedQty": "12.48900000",
+        "cummulativeQuoteQty": "0.43738697",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1597707905466,
+        "updateTime": 1597707905466,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 875015120,
+        "orderListId": -1,
+        "clientOrderId": "5gZhSBEJ3Kh07uiNjw3hgf",
+        "price": "0.00000000",
+        "origQty": "6.15100000",
+        "executedQty": "6.15100000",
+        "cummulativeQuoteQty": "0.21590274",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1597967106276,
+        "updateTime": 1597967106276,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 876995880,
+        "orderListId": -1,
+        "clientOrderId": "20ARZewdWKsqbChe1RB6vh",
+        "price": "0.00000000",
+        "origQty": "6.59200000",
+        "executedQty": "6.59200000",
+        "cummulativeQuoteQty": "0.22102976",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1598053505319,
+        "updateTime": 1598053505319,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 980446194,
+        "orderListId": -1,
+        "clientOrderId": "MCscLYvfL1bfe8FeYj4Joy",
+        "price": "0.00000000",
+        "origQty": "13.75700000",
+        "executedQty": "13.75700000",
+        "cummulativeQuoteQty": "0.45252050",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1603064705144,
+        "updateTime": 1603064705144,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 983135877,
+        "orderListId": -1,
+        "clientOrderId": "Qd7qAcIWwjvzp1Ua4thKDP",
+        "price": "0.00000000",
+        "origQty": "13.74400000",
+        "executedQty": "13.74400000",
+        "cummulativeQuoteQty": "0.42495073",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1603237504782,
+        "updateTime": 1603237504782,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 987232271,
+        "orderListId": -1,
+        "clientOrderId": "RBXCpJ4RnIga3vsgmDpv1P",
+        "price": "0.00000000",
+        "origQty": "6.59500000",
+        "executedQty": "6.59500000",
+        "cummulativeQuoteQty": "0.21023528",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1603410305659,
+        "updateTime": 1603410305659,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 988785527,
+        "orderListId": -1,
+        "clientOrderId": "9s6dYnkU0J4qWrILVOVtP8",
+        "price": "0.00000000",
+        "origQty": "6.79400000",
+        "executedQty": "6.79400000",
+        "cummulativeQuoteQty": "0.21461423",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1603496704569,
+        "updateTime": 1603496704569,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 991496065,
+        "orderListId": -1,
+        "clientOrderId": "XCEi8FAyfgLGfbFsE0VLi1",
+        "price": "0.00000000",
+        "origQty": "13.37500000",
+        "executedQty": "13.37500000",
+        "cummulativeQuoteQty": "0.41725987",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1603669504835,
+        "updateTime": 1603669504835,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1017574143,
+        "orderListId": -1,
+        "clientOrderId": "zzm48BiXA4v6PUyGomMZAh",
+        "price": "0.00000000",
+        "origQty": "14.27900000",
+        "executedQty": "14.27900000",
+        "cummulativeQuoteQty": "0.41657554",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1604706306411,
+        "updateTime": 1604706306411,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1026097759,
+        "orderListId": -1,
+        "clientOrderId": "InkXZWHJzxpJPIGFVAIIez",
+        "price": "0.00000000",
+        "origQty": "7.06200000",
+        "executedQty": "7.06200000",
+        "cummulativeQuoteQty": "0.20496359",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1604965504949,
+        "updateTime": 1604965504949,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1028723301,
+        "orderListId": -1,
+        "clientOrderId": "el0s29J1DpTRwoeDlOCwH4",
+        "price": "0.00000000",
+        "origQty": "6.95500000",
+        "executedQty": "6.95500000",
+        "cummulativeQuoteQty": "0.20499862",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605051905018,
+        "updateTime": 1605051905018,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1034722342,
+        "orderListId": -1,
+        "clientOrderId": "A7on6XLwYbPtNYaitezeJR",
+        "price": "0.00000000",
+        "origQty": "7.00600000",
+        "executedQty": "7.00600000",
+        "cummulativeQuoteQty": "0.19892887",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605224705648,
+        "updateTime": 1605224705648,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1040223173,
+        "orderListId": -1,
+        "clientOrderId": "eI7Vn8uxKhuGEJWkRHLXjZ",
+        "price": "0.00000000",
+        "origQty": "7.14500000",
+        "executedQty": "7.14500000",
+        "cummulativeQuoteQty": "0.20535444",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605397505331,
+        "updateTime": 1605397505331,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1042474511,
+        "orderListId": -1,
+        "clientOrderId": "gwQFy3LjGA3kemlEqj0gH3",
+        "price": "0.00000000",
+        "origQty": "7.11900000",
+        "executedQty": "7.11900000",
+        "cummulativeQuoteQty": "0.20007949",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605483905576,
+        "updateTime": 1605483905576,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1044798970,
+        "orderListId": -1,
+        "clientOrderId": "fkG71YZNSXtzDUBnePcMnW",
+        "price": "0.00000000",
+        "origQty": "7.11200000",
+        "executedQty": "7.11200000",
+        "cummulativeQuoteQty": "0.19642632",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605570305493,
+        "updateTime": 1605570305493,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1055831025,
+        "orderListId": -1,
+        "clientOrderId": "txWQKWrWmqEuYR9O7jgHrW",
+        "price": "0.00000000",
+        "origQty": "7.27900000",
+        "executedQty": "7.27900000",
+        "cummulativeQuoteQty": "0.19900786",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605915905658,
+        "updateTime": 1605915905658,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1055831028,
+        "orderListId": -1,
+        "clientOrderId": "BpEadUXj7DA0GI614Oraj4",
+        "price": "0.00000000",
+        "origQty": "7.27900000",
+        "executedQty": "7.27900000",
+        "cummulativeQuoteQty": "0.19900786",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1605915905710,
+        "updateTime": 1605915905710,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1058848888,
+        "orderListId": -1,
+        "clientOrderId": "lVb2eQJAq7Nv1J4NCs5SqN",
+        "price": "0.00000000",
+        "origQty": "0.11900000",
+        "executedQty": "0.11900000",
+        "cummulativeQuoteQty": "0.00348301",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "BUY",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1606002306695,
+        "updateTime": 1606002306695,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1073608089,
+        "orderListId": -1,
+        "clientOrderId": "UJHGJtvdpU4C1MyutUqxDp",
+        "price": "0.00000000",
+        "origQty": "7.26100000",
+        "executedQty": "7.26100000",
+        "cummulativeQuoteQty": "0.22015897",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1606347968287,
+        "updateTime": 1606347968287,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    },
+    {
+        "symbol": "ETHBTC",
+        "orderId": 1077715849,
+        "orderListId": -1,
+        "clientOrderId": "G96ySD7w0Zgan1t9OYnVlb",
+        "price": "0.00000000",
+        "origQty": "7.40100000",
+        "executedQty": "7.40100000",
+        "cummulativeQuoteQty": "0.22437610",
+        "status": "FILLED",
+        "timeInForce": "GTC",
+        "type": "MARKET",
+        "side": "SELL",
+        "stopPrice": "0.00000000",
+        "icebergQty": "0.00000000",
+        "time": 1606434366901,
+        "updateTime": 1606434366901,
+        "isWorking": true,
+        "origQuoteOrderQty": "0.00000000"
+    }
+]
+
+
+//////////WALLET history
+
+
+{
+    "code": 200,
+    "msg": "",
+    "snapshotVos": [
+        {
+            "type": "spot",
+            "updateTime": 1603929599000,
+            "data": {
+                "totalAssetOfBtc": "0.42838396",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604015999000,
+            "data": {
+                "totalAssetOfBtc": "0.42825007",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604102399000,
+            "data": {
+                "totalAssetOfBtc": "0.42813867",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604188799000,
+            "data": {
+                "totalAssetOfBtc": "0.42809197",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604275199000,
+            "data": {
+                "totalAssetOfBtc": "0.428225",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604361599000,
+            "data": {
+                "totalAssetOfBtc": "0.42814185",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604447999000,
+            "data": {
+                "totalAssetOfBtc": "0.42797638",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604534399000,
+            "data": {
+                "totalAssetOfBtc": "0.42805961",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604620799000,
+            "data": {
+                "totalAssetOfBtc": "0.42751104",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.42104882",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14024205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604707199000,
+            "data": {
+                "totalAssetOfBtc": "0.42814289",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00447328",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.40496305",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604793599000,
+            "data": {
+                "totalAssetOfBtc": "0.4315985",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00447328",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.40496305",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604879999000,
+            "data": {
+                "totalAssetOfBtc": "0.43006914",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00447328",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.40496305",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1604966399000,
+            "data": {
+                "totalAssetOfBtc": "0.42504233",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.2092319",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "7.34296305",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605052799000,
+            "data": {
+                "totalAssetOfBtc": "0.42850358",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00423328",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.29100805",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605139199000,
+            "data": {
+                "totalAssetOfBtc": "0.42869153",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00423328",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.29100805",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605225599000,
+            "data": {
+                "totalAssetOfBtc": "0.41268766",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.20296322",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "7.28500805",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605311999000,
+            "data": {
+                "totalAssetOfBtc": "0.41793174",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.20296322",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "7.28500805",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605398399000,
+            "data": {
+                "totalAssetOfBtc": "0.41484188",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.40811231",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14000805",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605484799000,
+            "data": {
+                "totalAssetOfBtc": "0.41478141",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.20803282",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "7.25188905",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605571199000,
+            "data": {
+                "totalAssetOfBtc": "0.41071997",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.40426271",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.13988905",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605657599000,
+            "data": {
+                "totalAssetOfBtc": "0.4105534",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.40426271",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.13988905",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605743999000,
+            "data": {
+                "totalAssetOfBtc": "0.41049573",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.40426271",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.13988905",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605830399000,
+            "data": {
+                "totalAssetOfBtc": "0.4104076",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.40426271",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.13988905",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1605916799000,
+            "data": {
+                "totalAssetOfBtc": "0.41077636",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00757174",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.68333105",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606003199000,
+            "data": {
+                "totalAssetOfBtc": "0.43633996",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00408873",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.80221205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606089599000,
+            "data": {
+                "totalAssetOfBtc": "0.45953556",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00408873",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.80221205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606175999000,
+            "data": {
+                "totalAssetOfBtc": "0.49547131",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00408873",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.80221205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606262399000,
+            "data": {
+                "totalAssetOfBtc": "0.4742944",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.00408873",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "14.80221205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606348799000,
+            "data": {
+                "totalAssetOfBtc": "0.4545027",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.22402755",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "7.54121205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "spot",
+            "updateTime": 1606435199000,
+            "data": {
+                "totalAssetOfBtc": "0.45500502",
+                "balances": [
+                    {
+                        "asset": "BTC",
+                        "free": "0.44817928",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "ETH",
+                        "free": "0.14021205",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "USDT",
+                        "free": "34.97007096",
+                        "locked": "0"
+                    },
+                    {
+                        "asset": "XTZ",
+                        "free": "4.08110258",
+                        "locked": "0"
+                    }
+                ]
+            }
+        }
+    ]
+}

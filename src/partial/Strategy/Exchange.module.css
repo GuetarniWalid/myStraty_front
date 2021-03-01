@@ -1,0 +1,59 @@
+.exchangeButton {
+  text-align: center;
+}
+
+.container .exchangeButton button {
+  color: #9cb0d4;
+}
+
+.container form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container button {
+  background: #e7effc;
+  color: #3276eb;
+  padding: 7px 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: #dfeafd;
+}
+
+.success {
+  display: inline-block;
+  background: #e7faf6;
+  color: #10b992;
+  padding: 7px 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.error {
+  display: inline-block;
+  background: #f8d7da;
+  color: #842029;
+  padding: 7px 15px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+/*******************/
+/***** DARKMODE ****/
+/********************/
+
+.container.dark .exchangeButton button {
+  color: #7db7dc;
+}
+.container.dark button {
+  background: #47475D;
+  color: #7db7dc!important;
+}
+
+.container.dark button:hover {
+  background: #4c4c64;
+}

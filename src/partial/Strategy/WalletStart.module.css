@@ -1,0 +1,157 @@
+.container {
+    padding-bottom: 30px;
+}
+
+.container>div {
+    display: flex;
+}
+
+.exchange {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.exchange button {
+    background: #e7effc;
+    border-radius: 5px;
+    padding: 7px 15px;
+    color: #3276eb;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.exchange button:hover {
+    background: #dfeafd;
+}
+
+
+.container p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.container span {
+    font-weight: bold;
+}
+
+.selected {
+    color: #3276eb;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.percentButtonContainer {
+    display: flex;
+    align-items: center;
+}
+
+.percentButton {
+    background: #e7effc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.percentButton:hover {
+    background: #dfeafd;
+}
+
+.percentButtonSelected {
+    color: #3276eb;
+}
+
+.startButton {
+    background: #e7faf6;
+    color: #10b992;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.startButton:hover {
+    color: #0e9c7b;
+    background: #dafaf3;
+}
+
+@media screen and (max-width: 500px ) {
+    .container>div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .exchange {
+        justify-content: flex-start;
+    }
+
+    .exchange button {
+        width: 100%;
+    }
+
+    .bottomContainer {
+        flex-direction: column;
+    }
+    .startButton {
+        margin-top: 15px;
+    }
+}
+
+.not {
+    animation: not 0.3s linear;
+}
+
+@keyframes not {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(+10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/***********************/
+/******** DARKMODE *****/
+/***********************/
+
+.container.dark .exchange button {
+    background: #47475D;
+    color: #7db7dc;
+}
+
+.container.dark .exchange button:hover {
+    background: #4c4c64;
+}
+
+.container.dark .selected {
+    color: #7db7dc;
+}
+
+
+.container.dark .percentButton {
+    background: #47475D;
+}
+
+.container.dark .percentButton:hover {
+    background: #47475D;
+}
+
+.container.dark .percentButtonSelected {
+    color: #7db7dc;
+}
+

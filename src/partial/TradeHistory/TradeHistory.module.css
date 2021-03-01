@@ -1,0 +1,132 @@
+.containerInDashboard {
+  width: 650px;
+}
+
+.container {
+  width: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  color: #3276eb;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.containerTrade {
+  background: #fff;
+  color: #b5c0d4;
+  border-radius: 5px;
+  padding: 10px 30px 20px;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-color: dark;
+}
+
+.containerTrade table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.containerTrade tbody td {
+  font-weight: 600;
+}
+
+.containerTrade td {
+  line-height: 47px;
+  border-bottom: 1px solid #f1f5f8;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.containerTrade tr:last-child td {
+  border-bottom: none;
+}
+
+.containerTrade thead tr:last-child td {
+  border-bottom: 1px solid #f1f5f8;
+}
+
+.blue {
+  color: #496595;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.action {
+  color: #fff;
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-weight: bold;
+}
+
+.selectable {
+  cursor: pointer;
+}
+
+.date {
+  line-height: 25px !important;
+}
+
+.noTrade {
+  padding-top: 20px !important;
+}
+
+@media screen and (max-width: 1700px) {
+  .containerInDashboard {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1575px) {
+  .containerInDashboard {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .containerInDashboard {
+    width: 100%;
+  }
+}
+
+
+/*************************/
+/******* DARKMODE ********/
+/*************************/
+
+.link.dark {
+  color: #7db7dc;
+}
+
+.containerTrade.dark {
+  background: #2e2e3d;
+  color: #f3f1ff;
+}
+
+.containerTrade.dark td {
+  border-bottom: 1px solid #47475d;
+}
+
+.containerTrade.dark thead tr:last-child td {
+  border-bottom: 1px solid #47475d;
+}
+
+.containerTrade.dark .blue {
+  color: #93aad3;
+}
+
+.containerTrade.dark .action {
+  color: #fff;
+}

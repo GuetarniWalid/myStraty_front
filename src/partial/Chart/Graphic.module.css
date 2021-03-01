@@ -1,0 +1,22 @@
+.container {
+  margin-bottom: 50px;
+}
+
+.graphicHeader {
+  background: #e9f0fb;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 66%;
+}
+
+.h3 {
+    font-size: 15px;
+}
+
+/******************************/
+/********** DARKMODE **********/
+/******************************/
+
+.container.dark .graphicHeader {
+  background: #47475D;
+}

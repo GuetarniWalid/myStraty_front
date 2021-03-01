@@ -1,0 +1,60 @@
+.ul {
+  list-style: none;
+  width: 50%;
+  color: #2F5187;
+  padding: 0 20px;
+}
+
+.ul li {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #F4F7F9;
+}
+
+.ul li:last-child{
+  border-bottom: 1px solid #F4F7F9;
+}
+
+.ul li span:first-child {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+}
+
+.ul li span:last-child {
+    margin-left: auto;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.ul li span{
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 530px) {
+
+  .ul{
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+/*****************************/
+/********* DARKMODE **********/
+/*****************************/
+
+.ul.dark {
+  color: #f3f1ff;
+}
+
+.ul.dark li {
+  border-top: 1px solid #47475D;
+}
+
+.ul.dark li:last-child{
+  border-bottom: 1px solid #47475D;
+}

@@ -1,0 +1,5 @@
+.container {
+    padding: 30px 5%;
+    overflow: hidden;
+    min-height: calc(100vh - 70px);
+}

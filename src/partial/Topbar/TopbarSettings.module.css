@@ -1,0 +1,110 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.wrapper form {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+
+.toggleBtn {
+  width: 60px;
+  height: 30px;
+  border-radius: 9999px;
+  background: #665f5fcb;
+  position: relative;
+  margin: 10px 20px;
+}
+
+.switch {
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+
+.text {
+  color: #5f7399;
+  font-weight: 600;
+}
+
+.containerDarkMode {
+  display: flex;
+  align-items: center;
+}
+.clock {
+  margin-left: 20px;
+  margin-top: 15px;
+  position: relative;
+}
+
+
+.clock span {
+  color: #5f7399;
+  font-weight: 600;
+}
+
+.clock input {
+  color: #5f7399;
+  font-weight: 600;
+}
+
+.info {
+  position: absolute;
+  border-radius: 5px;
+  display: block;
+  width: 200px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  line-height: 20px;
+}
+
+
+/**********************/
+/***** DARKMODE *******/
+/**********************/
+
+
+.wrapper.dark form {
+  background: #2e2e3d;
+}
+
+.wrapper.dark  .toggleBtn {
+  background: #665f5fcb;
+}
+
+.wrapper.dark  .switch {
+  background: #f3f1ff;
+}
+
+.wrapper.dark  .text {
+  color: #f3f1ff;
+}
+
+
+.wrapper.dark  .clock span {
+  color: #f3f1ff;
+}
+
+.wrapper.dark .clock input {
+  color: #f3f1ff;
+}

@@ -1,0 +1,1 @@
+export const currentPosition = {'BTC-USD': 0.5, 'ETH-USD': 0.5}

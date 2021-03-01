@@ -1,0 +1,86 @@
+.container {
+  border-top: 3px solid #fff;
+  padding: 30px;
+  position: absolute;
+  top: 100vh;
+  left: 200px;
+  right: 0;
+  background: rgb(243, 247, 253);
+  transform: translateY(-100%);
+  transition: 0.2s all;
+}
+
+.container textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+  transition: 0.2s all;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.container textarea:focus {
+  outline: none;
+  height: 100px;
+}
+
+.container>div {
+    text-align: right;
+}
+
+.container>div button{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/************************************/
+/*********** 700px ******************/
+
+@media screen and (max-width: 700px) {
+  .container {
+    left: 0px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .container {
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .container textarea {
+    height: 40px;
+    margin-bottom: 0;
+  }
+
+  .container>div button{
+    display: none;
+}
+}
+
+/********************/
+/***** DARKMODE *****/
+/*******************/
+
+.container.dark {
+  border-top: 3px solid #53536b;
+  background: rgb(71, 71, 94);
+}
+
+
+.container.dark textarea {
+  background: #606074;
+  color: #f3f1ff;
+}
+
+.container.dark textarea::placeholder {
+  color: #f3f1ff;
+}

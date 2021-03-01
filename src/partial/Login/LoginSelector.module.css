@@ -1,0 +1,88 @@
+.container {
+    background: rgba(34, 34, 34, 0.85);
+    color: #fff;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.container>div {
+    width: 400px;
+    padding: 0 20px;
+}
+
+.container h2 {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.container p {
+    line-height: 20px;
+}
+
+.container button {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 7px 14px;
+    transition: all 0.2s;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.container button:hover {
+    background: #fff;
+    color: rgba(34, 34, 34, 0.85);;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 80%;
+}
+
+@media screen and (max-width: 930px) {
+    .container>div {
+        width: 300px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        padding: 50px 20px;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 650px;
+    }
+
+    .container>div {
+        width: 100%;
+    }
+
+    .container>div:first-child {
+        margin-bottom: 50px;
+    }
+}
+
+/***************/
+/*** DARKMODE **/
+/****************/
+
+.container.dark {
+    background: #2e2e3d;
+    color: #f3f1ff;
+}
+
+
+.container.dark button {
+    border: 1px solid #f3f1ff;
+}
+
+.container.dark button:hover {
+    background: #fff;
+    color: rgba(34, 34, 34, 0.85);;
+}

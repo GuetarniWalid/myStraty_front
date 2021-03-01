@@ -1,0 +1,45 @@
+.container {
+    position: absolute;
+    right: 50px;
+    border-radius: 5px;
+    top: 0;
+    padding: 10px 20px;
+    width: 300px;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.container h4 {
+    background: unset;
+    color: unset;
+    font-size: 17px;
+    text-align: left;
+    line-height: 20px;
+}
+
+.container p {
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.container i {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.success {
+    background: #e7faf6;
+    color: #10b992;
+}
+
+.error {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.warning {
+    background: #fff3cd;
+    color: #664d03;
+}

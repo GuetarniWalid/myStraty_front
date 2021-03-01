@@ -1,0 +1,24 @@
+.chart {
+    box-sizing: border-box;
+    height: 80%;
+    background: #fff;
+    position: relative;
+}
+
+.chart h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: unset;
+    font-size: 15px;
+    text-align: unset;
+    line-height: 22px;
+}
+
+/*********************/
+/******** DARKMODE ***/
+/*********************/
+
+.chart.dark {
+    background: #2e2e3d;
+}

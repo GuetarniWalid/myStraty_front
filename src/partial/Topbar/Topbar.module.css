@@ -1,0 +1,152 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  text-align: center;
+  position: relative;
+}
+
+.header.light::after {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 0.5px;
+  position: absolute;
+  bottom: 0;
+  background: #e1e6ee;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/****** LEFT ******/
+
+.left i {
+  margin: 0 7px;
+  background: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: #b6c4db;
+  cursor: pointer;
+}
+
+.left .eth {
+  background: rgb(99, 98, 98);
+  color: #fff;
+}
+
+.left .btc {
+  background: rgb(255, 146, 1);
+  color: #fff;
+}
+
+.left .eur {
+  background: rgba(123, 158, 113, 1);
+  color: #fff;
+}
+
+.left .unselected {
+  background: #fff;
+  color: #b6c4db;
+}
+
+/****** MIDDLE ******/
+.middle {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.middle i {
+  font-size: 20px;
+  color: #3276eb;
+}
+
+/****** RIGHT ******/
+
+.right {
+  position: relative;
+}
+
+.right i {
+  color: #8da0bf;
+  margin: 0 9px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.right span {
+  width: 7px;
+  height: 7px;
+  background: green;
+  display: block;
+  position: absolute;
+  right: calc(50% - 8px);
+  top: -2px;
+  border-radius: 50%;
+  border: 1.6px solid #fff;
+}
+
+/************************************/
+/*********** 500px ******************/
+
+@media screen and (max-width: 500px) {
+  .left i {
+    margin: 0 5px;
+  }
+
+  .right i {
+    margin: 0 7px;
+  }
+
+  .middle span {
+    display: none;
+  }
+
+  .middle {
+    transform: scale(1.3);
+  }
+}
+
+/*************************************/
+/************ DARKMODE ***************/
+/*************************************/
+
+.header.dark::after {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 0.5px;
+  position: absolute;
+  bottom: 0;
+  background: #53536b;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/****** LEFT ******/
+
+.header.dark .left .unselected {
+  background: #2e2e3d;
+  color: #f3f1ff;
+}
+
+/****** MIDDLE ******/
+.header.dark .middle i {
+  color: #7db7dc;
+}
+
+.header.dark .middle {
+  color: #f3f1ff;
+}
+/****** RIGHT ******/
+.header.dark .right i {
+  color: #f3f1ff;
+}
+
+.header.dark .right span {
+  border: 1.6px solid rgba(77, 77, 101, 1);
+}

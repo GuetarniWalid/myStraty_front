@@ -1,0 +1,32 @@
+.container {
+    padding: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.container h1 {
+    color: #3276EB;
+    text-align: center;
+    font-size: 70px;
+}
+
+.container p {
+    color: #70809c;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/**************/
+/*** DARKMODE */
+/**************/
+
+.container.dark h1 {
+    color: #7db7dc;
+}
+
+.container.dark p {
+    color: #f3f1ff;
+}

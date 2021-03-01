@@ -1,0 +1,46 @@
+.container {
+  display: none;
+  transition: 'transform' 0.2s ease;
+}
+
+@media screen and (max-width: 700px) {
+  .container.hide {
+    transition: transform 0.2s ease;
+    transform: translateX(-100%);
+  }
+
+  .container.show {
+    transition: transform 0.2s ease 0.2s;
+    transform: translateX(0);
+  }
+
+  .container {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    top: 100px;
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background: rgb(101, 155, 248);
+  }
+
+  .container img {
+    width: 30px;
+  }
+}
+
+
+/*********************/
+/****** DARKMODE *****/
+/*********************/
+
+.container.dark {
+    background: #47475D;
+  }

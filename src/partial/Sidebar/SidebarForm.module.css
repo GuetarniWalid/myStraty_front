@@ -1,0 +1,85 @@
+.wrapper {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.wrapper form {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px;
+  background: #fff;
+  width: 320px;
+}
+
+.calandar {
+  color: #8c9dbb;
+}
+
+.wrapper form>div:nth-child(3) {
+  font-weight: 600;
+  font-size: 15px;
+  color: #8c9dbb;
+}
+
+.calandarInput {
+  color: #000;
+}
+
+
+.wrapper form>div:nth-child(4) {
+  height: 50px;
+  margin-top: 20px;
+}
+
+.wrapper form>div:nth-child(4) img {
+  height: 100%;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.2s;
+}
+
+.sexSelected {
+  transform: scale(1.2);
+}
+
+.calandar {
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px 0px rgba(83, 99, 134, 0.5);
+}
+
+/******* DARKMODE *******/
+
+.wrapper.dark form {
+  background: #2e2e3d;
+}
+
+.wrapper.dark form>div:nth-child(3) {
+  color: #f3f1ff;
+}
+
+.calandar.dark {
+  color: #f3f1ff;
+  background: #2e2e3d;
+}
+
+.calandarInput.dark {
+  color: #f3f1ff;
+}
+
+.calandarInput.dark input {
+  color: #f3f1ff;
+}
+
+.calandar.dark button:hover {
+  background: #46465c!important;
+}

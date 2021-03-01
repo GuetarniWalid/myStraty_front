@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.doughnutPart {
+  transition: all 0.2s;
+}
+
+.doughnut {
+  padding: 10px;
+}
+
+.total {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 21px;
+  font-weight: bold;
+  color: #2f5187;
+}
+
+@media screen and (max-width: 610px) {
+  .total {
+    font-size: 18px;
+  }
+}
+
+/**********************/
+/****** DARKMODE ******/
+/**********************/
+
+.container.dark .total {
+  color: #f3f1ff;
+}
