@@ -28,8 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "doc": "jsdoc -c jsdoc.json -r -d documentation",
-    "create-env": "printenv > .env"
+    "doc": "jsdoc -c jsdoc.json -r -d documentation"
   },
   "eslintConfig": {
     "extends": [
