@@ -11,9 +11,9 @@ export default function Subscription() {
   return (
     <div className={darkMode ? `${styles.container} ${styles.dark}` : styles.container}>
       <div>
-        <SubscriptionCard primaryColor='#13bb70' secondaryColor='#effdf6' price={12} title='Bronze' walletSize={1000} priceId={'price_1IBiUsCiN5YQTJp5ovKlLhHD'} />
-        <SubscriptionCard primaryColor='#00b6c8' secondaryColor='#edfaff' price={22} title='Argent' walletSize={5000} priceId={'price_1IBiVjCiN5YQTJp5fn4RqPsE'} />
-        <SubscriptionCard primaryColor='#f6b73e' secondaryColor='#fff9e1' price={29} title='Or' walletSize='> 5000' priceId={'price_1IBiW7CiN5YQTJp5AvlPG7pU'}/>
+        <SubscriptionCard primaryColor='#13bb70' secondaryColor='#effdf6' price={12} title='Bronze' walletSize={1000} priceId={process.REACT_APP_PRICE_ID_BRONZE} />
+        <SubscriptionCard primaryColor='#00b6c8' secondaryColor='#edfaff' price={22} title='Argent' walletSize={5000} priceId={process.REACT_APP_PRICE_ID_SILVER} />
+        <SubscriptionCard primaryColor='#f6b73e' secondaryColor='#fff9e1' price={29} title='Or' walletSize='> 5000' priceId={process.REACT_APP_PRICE_ID_GOLD}/>
       </div>
       <div className={styles.questions}>
         <ul>
