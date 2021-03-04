@@ -38,6 +38,7 @@ export default function WalletStart({
   }
 
   function handleAmountAllocated(e) {
+    e.preventDefault();
     const value = Number(e.target.value);
     dispatchAllocatedAmounts({ type: 'selector', strat: strategy.title, value: value, totalBalance: totalBinanceBalance });
     setPercentButton();
@@ -97,7 +98,9 @@ export default function WalletStart({
     }, 300);
   }
 
-  function preventStratIsSoonAvailable() {
+  function preventStratIsSoonAvailable(e) {
+    e.preventDefault();
+    console.log('test1');
     setWarn(true)
     setCard({
       title: `Strategie bientôt disponible !`,
@@ -147,7 +150,7 @@ export default function WalletStart({
           {strategy.active ? <button ref={startButtonRef} className={styles.startButton} onClick={startStrategy} style={exchange.validate ? null : { color: '#664d03', background: '#fff3cd' }}>
             Lancer
           </button>: 
-          <button ref={startButtonRef} className={styles.startButton} onClick={preventStratIsSoonAvailable} style={exchange.validate ? warn ? { color: '#664d03', background: '#fff3cd' } : null : { color: '#664d03', background: '#fff3cd' }}>
+          <button ref={startButtonRef} className={styles.startButton} onClick={preventStratIsSoonAvailable} style={exchange.validate ? (warn ? { color: '#664d03', background: '#fff3cd' } : null) : { color: '#664d03', background: '#fff3cd' }}>
           Lancer
         </button>
           }
