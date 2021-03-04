@@ -100,7 +100,6 @@ export default function WalletStart({
 
   function preventStratIsSoonAvailable(e) {
     e.preventDefault();
-    console.log('test1');
     setWarn(true)
     setCard({
       title: `Strategie bientôt disponible !`,
