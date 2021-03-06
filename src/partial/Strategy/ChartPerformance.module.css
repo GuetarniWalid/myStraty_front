@@ -7,7 +7,7 @@
 
 .chart h4 {
     position: absolute;
-    top: 0;
+    top: -30px;
     left: 0;
     background: unset;
     font-size: 15px;

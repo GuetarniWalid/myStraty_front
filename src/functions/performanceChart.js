@@ -26,6 +26,11 @@ export async function performanceChart(context, labels, dataAssets, darkMode, er
     },
     options: {
       responsive: true,
+      layout: {
+        padding: {
+          top: 30
+        }
+      },
       maintainAspectRatio: false,
       legend: {
         display: false,

@@ -16,6 +16,11 @@ export function currentPositionChart(context, labels, USDTValues, BTCValues, ETH
     },
     options: {
       responsive: true,
+      layout: {
+        padding: {
+          top: 30
+        }
+      },
       maintainAspectRatio: false,
         legend: {
           display: false,
