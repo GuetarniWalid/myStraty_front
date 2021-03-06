@@ -1,4 +1,4 @@
-import {formatNumber} from '../functions/various'
+import {formatNumber, formatCurrency} from '../functions/various'
 
 export async function updateLineChart(chart, lineChartData, timeInterval, currency, enoughDatas, darkMode) {
   let eur;
@@ -53,9 +53,9 @@ export async function updateLineChart(chart, lineChartData, timeInterval, curren
   function addCurrencySign(value) {
     let valueFormated = value;
     if (value >= 100) valueFormated = formatNumber(value / 1000, 2) + 'k';
-    if (currency === 'eur') return '€ ' + valueFormated;
-    if (currency === 'btc') return '₿ ' + valueFormated;
-    if (currency === 'eth') return 'Ξ ' + valueFormated;
+    if (currency === 'eur') return '€ ' + formatCurrency(valueFormated, 'eur');
+    if (currency === 'btc') return '₿ ' + formatCurrency(valueFormated, 'btc');
+    if (currency === 'eth') return 'Ξ ' + formatCurrency(valueFormated, 'eth');
   }
 
   chart.update();
