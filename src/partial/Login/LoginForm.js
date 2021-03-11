@@ -44,8 +44,8 @@ export default function LoginForm({ form, status, setStatus, setForm, forget, di
         e.target.reset();
         setStatus('success');
         setCard({
-          title: 'Dernière etape !',
-          text: "Un email a été envoyé a votre adresse. Merci de cliquer sur le lien présent à l'interieur afin de finaliser votre inscription.",
+          title: 'Un email a été envoyé !',
+          text: "Il peut arrivé que le mail mette quelque temps à arriver, cela est independant de notre volonté. Merci de cliquer sur le lien présent à l'interieur afin de finaliser votre inscription. ",
           type: 'success',
           time: '10000',
         });
@@ -63,9 +63,19 @@ export default function LoginForm({ form, status, setStatus, setForm, forget, di
         setLoggedIn(true);
         setLogged(true);
       } else if (!json.success && form.type === 'connexion') {
-        setField(json[0].field);
-        setMessage(json[0].field === 'email' ? 'Email incorrect' : 'Mot de passe incorrect');
-        setStatus('error');
+        if(json.message === "user not active") {
+          setStatus('error');
+          setCard({
+            title: 'Validez votre email',
+            text: "Votre email n'a pas encore été validé, veuillez cliquer sur le lien qui vous a été envoyé. Il peut arrivé que le mail prenne quelque temps à arriver.",
+            type: 'error',
+            time: '10000',
+          });
+        } else {
+          setField(json[0].field);
+          setMessage(json[0].field === 'email' ? 'Email incorrect' : 'Mot de passe incorrect');
+          setStatus('error');
+        }
       } else if (json.success && form.type === 'forget' && !displayPasswordInput) {
         e.target.reset();
         setStatus('success');

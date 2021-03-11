@@ -19,7 +19,7 @@ export default function Topbar() {
   const location = useLocation();
   const { currency, setCurrency } = useContext(CurrencyContext);
   const { setLoggedIn } = useContext(LoggedInContext);
-  const { isSubscribe } = useContext(SubscribeContext);
+  const { isSubscribe, setIsSubscribe } = useContext(SubscribeContext);
   const { darkMode } = useContext(DarkContext);
 
   const execute = useFetch();
@@ -80,6 +80,7 @@ export default function Topbar() {
   function deconnexion() {
     localStorage.removeItem('userId');
     localStorage.removeItem('token');
+    setIsSubscribe(true)
     setLoggedIn(false);
   }
 
