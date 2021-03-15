@@ -20,7 +20,8 @@ export default function useFetch() {
    * @description Add permission headers to the request and redirect user if there is bad authentication, the subscription or token validity is expiry
    * @async
    * @function execute
-   * @param {string} url - The url to request   * @param {string} [method=get] - The request method
+   * @param {string} url - The url to request   
+   * @param {string} [method=get] - The request method
    * @param {object} [body=null] - The request body
    * @returns {*} Return the result parsed from the API
    */

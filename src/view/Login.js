@@ -45,9 +45,11 @@ export default function Login() {
         params[paramSplitted[0]] = paramSplitted[1];
       });
       if (params.validation === 'true' && params.forget === 'true') {
+        //fix bug due to back redirection that add '#/' to the end or url
+        let token = params.token.split('#')[0]
+        setToken(token);
         setForm(forget);
         setDisplayPasswordInput(true);
-        setToken(params.token);
         setCard({
           title: 'Dernière étape!',
           text: 'Entrez votre mail, ainsi que votre nouveau mot de passe et le tour est joué!',
