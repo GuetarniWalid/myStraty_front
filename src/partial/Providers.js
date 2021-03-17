@@ -46,9 +46,8 @@ export default function Providers({ children }) {
   useEffect(() => {
     async function isLogged() {
       try {
-        const userId = localStorage.getItem('userId');
         const token = localStorage.getItem('token');
-        const data = await fetch(`${process.env.REACT_APP_URL_BACK}/api/v1/user/status/${userId}`, {
+        const data = await fetch(`${process.env.REACT_APP_URL_BACK}/api/v1/user/status`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

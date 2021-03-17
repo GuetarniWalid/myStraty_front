@@ -1,4 +1,3 @@
-
 import { useCallback, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { LoggedInContext } from '../partial/Providers';
@@ -12,7 +11,6 @@ import { SubscribeContext } from '../partial/Providers';
 export default function useFetch() {
   const { setLoggedIn, loggedIn } = useContext(LoggedInContext);
   const { setIsSubscribe } = useContext(SubscribeContext);
-  const userId = localStorage.getItem('userId');
   const token = localStorage.getItem('token');
   const history = useHistory();
 
@@ -20,7 +18,7 @@ export default function useFetch() {
    * @description Add permission headers to the request and redirect user if there is bad authentication, the subscription or token validity is expiry
    * @async
    * @function execute
-   * @param {string} url - The url to request   
+   * @param {string} url - The url to request
    * @param {string} [method=get] - The request method
    * @param {object} [body=null] - The request body
    * @returns {*} Return the result parsed from the API
@@ -30,7 +28,7 @@ export default function useFetch() {
       let data;
       //in case method is GET
       if (method === 'get') {
-        data = await fetch(`${url}/${userId}`, {
+        data = await fetch(`${url}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +37,7 @@ export default function useFetch() {
 
       //in case method is POST
       if (method === 'post') {
-        data = await fetch(`${url}/${userId}`, {
+        data = await fetch(`${url}`, {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${token}`,

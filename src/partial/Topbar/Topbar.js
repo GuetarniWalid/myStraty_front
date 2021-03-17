@@ -78,7 +78,7 @@ export default function Topbar() {
   }
 
   function deconnexion() {
-    localStorage.removeItem('userId');
+    fetch(`/api/v1/login/logout`)
     localStorage.removeItem('token');
     setIsSubscribe(true)
     setLoggedIn(false);

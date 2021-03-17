@@ -17,7 +17,7 @@ export default function ButtonToggleSideBar({ setShowNav, showNav }) {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      ref.current.style.top = window.scrollY + 100 + 'px';
+      if(ref.current) ref.current.style.top = window.scrollY + 100 + 'px';
     });
   }, []);
 
