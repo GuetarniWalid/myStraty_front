@@ -2,16 +2,18 @@ import React, { useEffect, useState, useContext } from 'react';
 import { formatFirstLetterUppercase } from '../../functions/various';
 import styles from './Message.module.css';
 import {DarkContext} from '../Providers'
+import { UserContext } from '../Providers';
 
 export default function Message({ text, userId, pseudo, date }) {
+  console.log("🚀 ~ file: Message.js ~ line 7 ~ Message ~ userId", userId)
+  const { user } = useContext(UserContext);
   const {darkMode} = useContext(DarkContext)
   const [ownMessage, setOwnMessage] = useState();
   const adminMessage = Number(userId) === 1;
 
   useEffect(() => {
-    const myId = localStorage.getItem('userId');
-    setOwnMessage(Number(myId) === Number(userId));
-  }, [userId]);
+    setOwnMessage(Number(user.id) === Number(userId));
+  }, [userId, user.id]);
 
   return (
     <div className={darkMode ? `${styles.container} ${styles.dark}` : styles.container}>
