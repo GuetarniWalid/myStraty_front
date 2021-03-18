@@ -33,7 +33,6 @@ export default function Community() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     try {
-      console.log(process.env.REACT_APP_URL_BACK_WEBSOCKET);
       ws.current = Ws(`${process.env.REACT_APP_URL_BACK_WEBSOCKET}`, {path: 'chat'});
       ws.current.withJwtToken(token).connect();
       
@@ -44,14 +43,14 @@ export default function Community() {
     catch(e) {
       console.log(e)
     }
-
+    
     return () => {
       ws.current.close();
       if(chat) chat.off()
     };
     // eslint-disable-next-line
   }, []);
-
+  
   function subscribeChat() {
     const chat = ws.current.subscribe('general');
 

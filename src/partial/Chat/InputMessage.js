@@ -12,9 +12,8 @@ export default function InputMessage({ chatReady, chat, messagesDisplayed }) {
   function handleSubmit() {
     if (!chatReady) return;
 
-    const userId = localStorage.getItem('userId');
     chat.emit('message', {
-      userId: userId,
+      userId: user.id,
       pseudo: user.username,
       message: formRef.current.message.value,
     });
