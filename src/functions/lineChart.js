@@ -1,8 +1,8 @@
 import Chart from 'chart.js';
-import 'chartjs-adapter-date-fns'
-import {fr} from 'date-fns/locale'
-import constructTooltip from '../functions/constructToolTipLineChart'
-import {formatNumber} from '../functions/various'
+import 'chartjs-adapter-date-fns';
+import { fr } from 'date-fns/locale';
+import constructTooltip from '../functions/constructToolTipLineChart';
+import { formatNumber, formatCurrency } from '../functions/various';
 
 export function lineChart(currency, context, dataAsset, timeInterval, displayFakeData, darkMode) {
   const storage = new Chart(context, {
@@ -30,8 +30,8 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
           borderColor: displayFakeData ? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)',
           borderWidth: 1,
           lineTension: 0,
-          pointBackgroundColor: displayFakeData? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)',
-          pointBorderColor: displayFakeData? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)',
+          pointBackgroundColor: displayFakeData ? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)',
+          pointBorderColor: displayFakeData ? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)',
           pointBorderWidth: 0,
           pointRadius: 0,
           pointHitRadius: 5,
@@ -49,10 +49,12 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
         xPadding: 10,
         yPadding: 5,
         caretPadding: 10,
-        custom: displayFakeData ? null : function (tooltipModel) {
-          const construct = constructTooltip.bind(this)
-          construct(tooltipModel, dataAsset, darkMode)
-        }
+        custom: displayFakeData
+          ? null
+          : function (tooltipModel) {
+              const construct = constructTooltip.bind(this);
+              construct(tooltipModel, dataAsset, darkMode);
+            },
       },
       layout: {
         padding: {
@@ -71,11 +73,12 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
               autoSkipPadding: 20,
               fontColor: darkMode ? '#f3f1ff' : '#000',
               callback: function (value) {
-                let valueFormated = value
-                if(value >= 100) valueFormated = formatNumber((value / 1000), 2) + 'k'
-                if (currency === 'eur') return '€ ' + valueFormated;
-                if (currency === 'btc') return '₿ ' + valueFormated;
-                if (currency === 'eth') return 'Ξ ' + valueFormated;
+                console.log('🚀', value);
+                let valueFormated = value;
+                if (value >= 100) valueFormated = formatNumber(value / 1000, 2) + 'k';
+                if (currency === 'eur') return '€ ' + formatCurrency(valueFormated, 'eur');
+                if (currency === 'btc') return '₿ ' + formatCurrency(valueFormated, 'btc');
+                if (currency === 'eth') return 'Ξ ' + formatCurrency(valueFormated, 'eth');
               },
             },
             gridLines: {
@@ -83,7 +86,7 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
               drawTicks: false,
               drawBorder: false,
               zeroLineWidth: 0,
-              fontColor: darkMode ? '#f3f1ff' : '#000'
+              fontColor: darkMode ? '#f3f1ff' : '#000',
             },
           },
         ],
@@ -91,16 +94,16 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
           {
             adapters: {
               date: {
-                locale: fr
-              }
+                locale: fr,
+              },
             },
             type: 'time',
             time: {
               unit: timeInterval === '1J' ? 'day' : timeInterval === '1S' ? 'week' : 'month',
               displayFormats: {
                 day: 'd MMM',
-                week: 'd MMM'
-            }
+                week: 'd MMM',
+              },
             },
             gridLines: {
               color: darkMode ? '#47475D' : '#F9FAFA',
@@ -112,7 +115,7 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
               autoSkipPadding: 10,
               padding: 10,
               maxRotation: 50,
-              fontColor: darkMode ? '#f3f1ff' : '#000'
+              fontColor: darkMode ? '#f3f1ff' : '#000',
             },
           },
         ],

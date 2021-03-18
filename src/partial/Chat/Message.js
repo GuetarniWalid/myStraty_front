@@ -5,7 +5,6 @@ import {DarkContext} from '../Providers'
 import { UserContext } from '../Providers';
 
 export default function Message({ text, userId, pseudo, date }) {
-  console.log("🚀 ~ file: Message.js ~ line 7 ~ Message ~ userId", userId)
   const { user } = useContext(UserContext);
   const {darkMode} = useContext(DarkContext)
   const [ownMessage, setOwnMessage] = useState();
