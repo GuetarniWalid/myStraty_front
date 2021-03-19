@@ -73,7 +73,6 @@ export function lineChart(currency, context, dataAsset, timeInterval, displayFak
               autoSkipPadding: 20,
               fontColor: darkMode ? '#f3f1ff' : '#000',
               callback: function (value) {
-                console.log('🚀', value);
                 let valueFormated = value;
                 if (value >= 100) valueFormated = formatNumber(value / 1000, 2) + 'k';
                 if (currency === 'eur') return '€ ' + formatCurrency(valueFormated, 'eur');
