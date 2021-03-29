@@ -12,5 +12,47 @@
   }
 }
 
+/********* style for bypass CSP rules to construct tooltip style ****************/
 
+.tooltipTitle {
+  font-family: 'Hind', sans-serif;
+  color: #3276eb;
+  margin-bottom: 15;
+  font-weight: bold;
+}
 
+.tooltipTitleDark {
+  color: #7db7dc;
+}
+
+.tooltipLegend {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.tooltipLegendEur {
+  background-color: rgba(123, 158, 113, 1);
+}
+
+.tooltipLegendBtc {
+  background-color: rgba(255, 146, 1, 1);
+}
+
+.tooltipLegendEth {
+  background-color: rgba(140, 140, 140, 1);
+}
+
+.tooltipBody {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: #8497b8;
+  margin-bottom: 15;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tooltipBodyDark {
+  color: #f3f1ff;
+}

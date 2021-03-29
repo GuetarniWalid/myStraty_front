@@ -31,34 +31,13 @@ export default function constructTooltipLineChart(tooltipModel, dataAsset, darkM
       month: 'long',
       day: 'numeric',
     });
-    const titleStyle = `
-    font-family: "Hind", sans-serif; 
-    color: ${darkMode ? '#7db7dc' : '#3276EB'};
-    margin-bottom: 15;
-    font-weight: bold;
-    `;
-    const title = `<p style='${titleStyle}'>${titleToFormatData}</p>`;
+    const title = `<p class='tooltipTitle ${darkMode ? 'tooltipTitleDark' : null}'>${titleToFormatData}</p>`;
     tooltipEl.innerHTML += title;
 
     // Set body
     const unit = this._chartInstance.chart.options.scales.xAxes[0].time.unit;
-    function createBodyElement(legendBackground, currency, legendName, sign) {
-      const pStyle = `
-      font-family: "Open Sans", sans-serif; 
-      font-size: 10px;
-      color: ${darkMode ? '#f3f1ff' : '#8497B8'};
-      margin-bottom: 15;
-      display: flex;
-      justify-content: space-between
-      `;
-      const legendStyle = `
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: ${legendBackground}
-      `;
-      const legend = `<span style='${legendStyle}'></span>`;
+    function createBodyElement(classLegend, currency, legendName, sign) {
+      const legend = `<span class='tooltipLegend ${classLegend}'></span>`;
       const leftSpan = `<span>${legend} ${legendName}</span>`;
 
       const priceFormated =
@@ -66,15 +45,15 @@ export default function constructTooltipLineChart(tooltipModel, dataAsset, darkM
           ? String(dataAsset[currency].valuesByDay[tooltipModel.dataPoints[0].index]).substring(0, 7)
           : String(dataAsset[currency].valuesByMonth[tooltipModel.dataPoints[0].index]).substring(0, 7);
 
-      const element = `<p style='${pStyle}'>${leftSpan}<span>${sign}${priceFormated}</span></p>`;
+      const element = `<p class='tooltipBody ${darkMode ? 'tooltipBodyDark' : null}'>${leftSpan}<span>${sign}${priceFormated}</span></p>`;
       tooltipEl.innerHTML += element;
     }
     //eur
-    createBodyElement('rgba(123,158,113,1)', 'eur', 'euro', '€ ');
+    createBodyElement('tooltipLegendEur', 'eur', 'euro', '€ ');
     //btc
-    createBodyElement('rgba(255,146,1,1)', 'btc', 'bitcoin', '₿ ');
+    createBodyElement('tooltipLegendBtc', 'btc', 'bitcoin', '₿ ');
     //eth
-    createBodyElement('rgba(140,140,140,1)', 'eth', 'ethereum', 'Ξ ');
+    createBodyElement('tooltipLegendEth', 'eth', 'ethereum', 'Ξ ');
 
     // `this` will be the overall tooltip
     var position = this._chart.canvas.getBoundingClientRect();
