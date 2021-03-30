@@ -6,7 +6,7 @@ import { AlertContext } from '../partial/Providers';
 import { DarkContext } from '../partial/Providers';
 
 const connexion = {
-  title: 'CONNECTION',
+  title: 'CONNEXION',
   type: 'connexion',
   button: 'SE CONNECTER',
 };
