@@ -31,7 +31,7 @@ export default function TradeHistory({ limit }) {
         if (!mounted) return;
 
         tradeRef.current = limit ? json.slice(0, limit) : json;
-        setTrades(json);
+        setTrades(tradeRef.current);
       } catch (e) {
         console.log(e.message);
       }
@@ -45,7 +45,6 @@ export default function TradeHistory({ limit }) {
   }, [limit]);
 
   function handleActionClick() {
-    console.log(tradeRef.current)
     if (action === 'all') {
       const tradeFilter = filterTradeBuy(tradeRef.current);
       setTrades(tradeFilter);
@@ -61,6 +60,7 @@ export default function TradeHistory({ limit }) {
   }
 
   function handleCurrencyClick() {
+    console.log(currency);
     if (currency === 'various') {
       const currencyFiltered = filterCurrencyBTC(tradeRef.current);
       setTrades(currencyFiltered);
@@ -140,8 +140,8 @@ export default function TradeHistory({ limit }) {
                 Action <i className='fas fa-chevron-down'></i>
               </td>
               <td>Montant</td>
-              <td onClick={handleCurrencyClick} className={styles.selectable}>
-                Devise <i className='fas fa-chevron-down'></i>
+              <td onClick={pathname === '/console/historique' ? handleCurrencyClick : null} className={styles.selectable}>
+                Devise {pathname === '/console/historique' ? <i className='fas fa-chevron-down'></i> : null}
               </td>
               <td className={styles.selectable} onClick={convertClick}>
                 En {convertIn === 'usdt' ? 'eur' : convertIn} <i className='fas fa-chevron-down'></i>
