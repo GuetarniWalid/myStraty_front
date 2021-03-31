@@ -32,7 +32,6 @@ export default function Exchange({ setExchange, exchange }) {
           privateKey: formRef.current[0].value,
           publicKey: formRef.current[1].value,
         })
-      console.log("🚀 ~ file: Exchange.js ~ line 35 ~ handleTest ~ response", response)
       setExchange(response.exchange);
       setRefresh(count => ++count);
       if (response.success) {
