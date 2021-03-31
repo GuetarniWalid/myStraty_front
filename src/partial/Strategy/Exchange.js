@@ -32,12 +32,13 @@ export default function Exchange({ setExchange, exchange }) {
           privateKey: formRef.current[0].value,
           publicKey: formRef.current[1].value,
         })
+      console.log("🚀 ~ file: Exchange.js ~ line 35 ~ handleTest ~ response", response)
       setExchange(response.exchange);
       setRefresh(count => ++count);
       if (response.success) {
         setCard({
           title: 'Connexion réussi',
-          text: `Vous êtes maintenant connécté sur ${exchange.name}, vous pouvez consulter votre solde directement sur la platform`,
+          text: `Vous êtes maintenant connecté sur ${exchange.name}, vous pouvez consulter votre solde directement sur la platform`,
           type: 'success',
           time: 6000,
           success: true,
@@ -45,7 +46,7 @@ export default function Exchange({ setExchange, exchange }) {
       } else {
         setCard({
           title: 'Connexion échoué',
-          text: 'Votre clé public ou votre clé privée contient une erreur, veuillez les revérifier et tester à nouveau',
+          text: 'Votre clé publique ou votre clé privée contient une erreur, veuillez les revérifier et tester à nouveau',
           type: 'error',
           time: 6000,
           success: false,
