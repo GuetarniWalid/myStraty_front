@@ -84,6 +84,7 @@ export default function Strategy() {
           execute(`${process.env.REACT_APP_URL_BACK}/api/v1/exchange/info/${exchange.name}`),
           fetch(`${process.env.REACT_APP_URL_BACK}/api/v1/strategies`).then(data => data.json()),
         ]);
+        console.log("🚀 ~ file: Strategy.js ~ line 87 ~ getExchangeAmountAndStrategies ~ usdt", usdt)
         //to avoid states change if the component is unmonted
         if (!mounted) return;
         

@@ -97,12 +97,23 @@ export default function LineChart({ timeIntervalPortfolio }) {
     //transform usdt values to eur values
     let jsonRateEur;
     try {
-      const dataRateEur = await fetch(`https://api.exchangeratesapi.io/latest`);
+      const dataRateEur = await fetch(`https://v6.exchangerate-api.com/v6/fc2686ebb0db723c81635f4c/latest/USD`);
       jsonRateEur = await dataRateEur.json();
-    } catch (e) {
+      //
+      
+      if(jsonRateEur.result !== 'success') throw new Error('exchangerate-api error, check api keys')
+
+      //if an error occur, no more treatment
       jsonRateEur = {
         rates: {
-          USD: 1.2338,
+          USD: 1 / jsonRateEur.conversion_rates.EUR,
+        }
+      }
+    } catch (e) {
+      console.error(e)
+      jsonRateEur = {
+        rates: {
+          USD: 1.17,
         },
       };
     }
