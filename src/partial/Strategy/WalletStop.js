@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { RefreshStrategyContext } from '../Providers';
 import { AlertContext } from '../Providers';
 import { RateContext } from '../Providers';
@@ -7,6 +7,7 @@ import { formatCurrency } from '../../functions/various';
 import useFetch from '../../hooks/useFetch';
 import { DarkContext } from '../Providers';
 import useFormatDoughnutData from '../../hooks/useFormatDoughnutData';
+import StatusButton from '../../micro-partial/StatusButton';
 
 export default function WalletStop({ userStrategy, setSrategyStarted, setUserStrategy, setPercentButton, strategy, exchange, changeExchange }) {
   const { setRefresh } = useContext(RefreshStrategyContext);
@@ -15,13 +16,16 @@ export default function WalletStop({ userStrategy, setSrategyStarted, setUserStr
   const { rate, setRate } = useContext(RateContext);
   const execute = useFetch();
   const formatDoughnutData = useFormatDoughnutData();
+  const [statusButton, setstatusButton] = useState('idle')
 
   async function stopStrategy(e) {
     e.preventDefault();
+    setstatusButton('pending')
     try {
       const json = await execute(`${process.env.REACT_APP_URL_BACK}/api/v1/strategies/user/stop/${userStrategy.id}`);
       const success = json.success;
       if (success) {
+        setstatusButton('success')
         setSrategyStarted();
         setUserStrategy();
         setRefresh(count => ++count);
@@ -104,9 +108,9 @@ export default function WalletStop({ userStrategy, setSrategyStarted, setUserStr
       </div>
       <form>
         <div className={styles.bottomContainer}>
-          <button className={styles.stopButton} onClick={stopStrategy}>
+          <StatusButton className={styles.stopButton} handleFunction={stopStrategy} status={statusButton}>
             Arrêter
-          </button>
+          </StatusButton>
         </div>
       </form>
     </div>
