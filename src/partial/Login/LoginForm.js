@@ -103,11 +103,13 @@ export default function LoginForm({ form, status, setStatus, setForm, forget, di
     }
   }
 
-  async function handleForgottenPassword() {
+  async function handleForgottenPassword(e) {
+    e.preventDefault();
     setForm(forget);
   }
 
-  async function handleResendMail() {
+  async function handleResendMail(e) {
+    e.preventDefault()
     const mail = document.getElementById('email').value;
     const data = await fetch(`${process.env.REACT_APP_URL_BACK}/api/v1/login/resend/mail`, {
       method: 'post',
