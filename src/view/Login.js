@@ -144,6 +144,7 @@ export default function Login() {
         setMessage={setMessage}
         resendMail={resendMail}
         setResendMail={setResendMail}
+        connexion={connexion}
       />
     </div>
   );

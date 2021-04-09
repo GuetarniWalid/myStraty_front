@@ -7,7 +7,7 @@ import { AlertContext } from '../Providers';
 import { LoggedInContext } from '../Providers';
 import { DarkContext } from '../Providers';
 
-export default function LoginForm({ form, status, setStatus, setForm, forget, displayPasswordInput, token, message, setMessage, resendMail, setResendMail }) {
+export default function LoginForm({ form, status, setStatus, setForm, forget, displayPasswordInput, token, message, setMessage, resendMail, setResendMail, connexion}) {
   const { setCard } = useContext(AlertContext);
   const { setLoggedIn } = useContext(LoggedInContext);
   const { darkMode } = useContext(DarkContext);
@@ -86,7 +86,16 @@ export default function LoginForm({ form, status, setStatus, setForm, forget, di
           time: '10000',
         });
       } else if (json.success && form.type === 'forget' && displayPasswordInput) {
-        setLogged(true);
+        setCard({
+          title: 'Nouveau mot de passe !',
+          text: "Votre mot de passe a bien été changé, vous pouvez maintenant vous connecter avec.",
+          type: 'success',
+          time: '10000',
+        });
+        setForm(connexion)
+        setStatus('idle')
+        setMessage()
+        setResendMail(false)
       } else {
         setField(json.details.field);
         setMessage(json.details.message);
@@ -104,12 +113,10 @@ export default function LoginForm({ form, status, setStatus, setForm, forget, di
   }
 
   async function handleForgottenPassword(e) {
-    e.preventDefault();
     setForm(forget);
   }
 
   async function handleResendMail(e) {
-    e.preventDefault()
     const mail = document.getElementById('email').value;
     const data = await fetch(`${process.env.REACT_APP_URL_BACK}/api/v1/login/resend/mail`, {
       method: 'post',
