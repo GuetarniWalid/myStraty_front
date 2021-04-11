@@ -66,6 +66,9 @@ export default function useFetch() {
           //if there is an error on a form
           case 'formValidation':
             return json;
+          //if there is an error on strategy management
+          case 'management':
+            return json;
           //if exchange keys are incorrect
           case 'exchange':
             return json;

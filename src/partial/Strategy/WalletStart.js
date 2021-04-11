@@ -5,6 +5,7 @@ import { RefreshStrategyContext } from '../Providers';
 import { AlertContext } from '../Providers';
 import useFetch from '../../hooks/useFetch';
 import {DarkContext} from '../Providers'
+import {StatusButton} from '../../micro-partial/StatusButton'
 
 export default function WalletStart({
   dispatchAllocatedAmounts,
@@ -19,6 +20,7 @@ export default function WalletStart({
   changeExchange,
 }) {
   const [warn, setWarn] = useState(false)
+  const [statusButton, setStatusButton] = useState('idle')
   const { setCard } = useContext(AlertContext);
   const startButtonRef = useRef();
   const { setRefresh } = useContext(RefreshStrategyContext);
@@ -46,12 +48,14 @@ export default function WalletStart({
 
   async function startStrategy(e) {
     e.preventDefault();
+    
     if (!exchange.validate) {
       exchangeInvalid();
       return;
     }
-
+    
     try {
+      setStatusButton('pending')
       const response = await execute(`${process.env.REACT_APP_URL_BACK}/api/v1/strategies/user/start`, 'post', {
         amount: AllocatedAmounts[strategy.title].value,
         strat: strategy.title,
@@ -59,12 +63,12 @@ export default function WalletStart({
         frequency: strategy.frequency,
         reference: strategy.strategy,
       });
-      setUserStrategy(response.userStrategy);
-      setRefresh(count => ++count);
-      setPercentButton();
-      setSrategyStarted(response.success);
-
+      
       if (response.success) {
+        setPercentButton();
+        setUserStrategy(response.userStrategy);
+        setRefresh(count => ++count);
+        setSrategyStarted(response.success);
         setCard({
           title: `Strategie lancé !`,
           text: `La strategie ${strategy.title} a été lancé sur ${exchange.name}.
@@ -72,7 +76,17 @@ export default function WalletStart({
           type: 'success',
           time: 15000,
         });
-      } else {
+      }
+      else if(!response.success && response.details.type === 'management') {
+        setStatusButton('error')
+        setCard({
+          title: `Montant trop petit`,
+          text: `Le montant alloué pour une stratégie doit être supérieur à 40 dollars, en dessous l'échange pourrait refuser de passer les orders`,
+          type: 'error',
+          time: 15000,
+        });
+      }
+      else {
         setCard({
           title: `Un problème est survenu`,
           text: `Veuillez revérifier vos clés privées et public, si le problème persiste retentez plus tard ou contactez nous, nous repondons au plus vite pour tout problème`,
@@ -146,12 +160,12 @@ export default function WalletStart({
               100%
             </button>
           </div>
-          {strategy.active ? <button ref={startButtonRef} className={styles.startButton} onClick={startStrategy} style={exchange.validate ? null : { color: '#664d03', background: '#fff3cd' }}>
+          {strategy.active ? <StatusButton ref={startButtonRef} status={statusButton} handleFunction={startStrategy} idleStyle={exchange.validate ? { color: '#10b992', background: '#e7faf6', marginRight: '10px' } : { color: '#664d03', background: '#fff3cd', marginRight: '10px' }}>
             Lancer
-          </button>: 
-          <button ref={startButtonRef} className={styles.startButton} onClick={preventStratIsSoonAvailable} style={exchange.validate ? (warn ? { color: '#664d03', background: '#fff3cd' } : null) : { color: '#664d03', background: '#fff3cd' }}>
+          </StatusButton>: 
+          <StatusButton ref={startButtonRef} status={statusButton} handleFunction={preventStratIsSoonAvailable} idleStyle={exchange.validate ? (warn ? { color: '#664d03', background: '#fff3cd', marginRight: '10px' } : { color: '#10b992', background: '#e7faf6', marginRight: '10px' }) : { color: '#664d03', background: '#fff3cd', marginRight: '10px' }}>
           Lancer
-        </button>
+        </StatusButton>
           }
         </div>
       </form>

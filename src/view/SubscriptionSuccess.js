@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import StatusButton from '../micro-partial/StatusButton'
+import {StatusButton} from '../micro-partial/StatusButton'
 import styles from './SubscriptionSuccess.module.css';
 import confetti from 'canvas-confetti';
 import useFetch from '../hooks/useFetch';

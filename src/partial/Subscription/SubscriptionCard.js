@@ -5,7 +5,7 @@ import { AlertContext } from '../Providers';
 import {PlanContext} from '../Providers'
 import {SubscribeContext} from '../Providers'
 import {TesterContext} from '../Providers'
-import StatusButton from '../../micro-partial/StatusButton';
+import {StatusButton} from '../../micro-partial/StatusButton';
 
 export default function SubscriptionCard({ primaryColor, secondaryColor, price, title, walletSize, priceId }) {
   const execute = useFetch();

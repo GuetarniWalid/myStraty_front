@@ -1,7 +1,7 @@
 import React, { useState, useContext, useRef } from 'react';
 import { Redirect } from 'react-router-dom';
 import Input from '../../micro-partial/Input';
-import StatusButton from '../../micro-partial/StatusButton';
+import {StatusButton} from '../../micro-partial/StatusButton';
 import styles from './LoginForm.module.css';
 import { AlertContext } from '../Providers';
 import { LoggedInContext } from '../Providers';

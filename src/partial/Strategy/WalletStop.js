@@ -7,7 +7,7 @@ import { formatCurrency } from '../../functions/various';
 import useFetch from '../../hooks/useFetch';
 import { DarkContext } from '../Providers';
 import useFormatDoughnutData from '../../hooks/useFormatDoughnutData';
-import StatusButton from '../../micro-partial/StatusButton';
+import {StatusButton} from '../../micro-partial/StatusButton';
 
 export default function WalletStop({ userStrategy, setSrategyStarted, setUserStrategy, setPercentButton, strategy, exchange, changeExchange }) {
   const { setRefresh } = useContext(RefreshStrategyContext);
