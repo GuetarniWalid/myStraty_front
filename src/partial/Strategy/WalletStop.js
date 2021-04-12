@@ -17,6 +17,7 @@ export default function WalletStop({ userStrategy, setSrategyStarted, setUserStr
   const execute = useFetch();
   const formatDoughnutData = useFormatDoughnutData();
   const [statusButton, setstatusButton] = useState('idle')
+  const [launchRefresh, setLaunchRefresh] = useState(false)
 
   async function stopStrategy(e) {
     e.preventDefault();
@@ -28,7 +29,6 @@ export default function WalletStop({ userStrategy, setSrategyStarted, setUserStr
         setstatusButton('success')
         setSrategyStarted();
         setUserStrategy();
-        setRefresh(count => ++count);
         setPercentButton();
         setCard({
           title: `Strategie stoppé !`,
@@ -37,11 +37,31 @@ export default function WalletStop({ userStrategy, setSrategyStarted, setUserStr
           type: 'success',
           time: 15000,
         });
+        //set a timout to allow time to Binance to update data
+        setLaunchRefresh(true)
       }
     } catch (e) {
       console.log(e.message);
     }
   }
+
+  //to allow time to Binance to update data
+  useEffect(() => {
+    if(!launchRefresh) return
+    let mounted = true;
+
+
+    const delay = setTimeout(() => {
+      if(!mounted) return
+      setRefresh(count => ++count);
+    }, 1000)
+
+    return () => {
+      mounted = false
+      setLaunchRefresh(false)
+      clearTimeout(delay)
+    }
+  }, [launchRefresh, setRefresh])
 
   useEffect(() => {
     async function getRates() {

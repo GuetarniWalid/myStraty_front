@@ -20,6 +20,7 @@ export default function WalletStart({
   changeExchange,
 }) {
   const [warn, setWarn] = useState(false)
+  const [launchRefresh, setLaunchRefresh] = useState(false)
   const [statusButton, setStatusButton] = useState('idle')
   const { setCard } = useContext(AlertContext);
   const startButtonRef = useRef();
@@ -67,7 +68,6 @@ export default function WalletStart({
       if (response.success) {
         setPercentButton();
         setUserStrategy(response.userStrategy);
-        setRefresh(count => ++count);
         setSrategyStarted(response.success);
         setCard({
           title: `Strategie lancé !`,
@@ -76,12 +76,14 @@ export default function WalletStart({
           type: 'success',
           time: 15000,
         });
+        //set a timout to allow time to Binance to update data
+        setLaunchRefresh(true)
       }
       else if(!response.success && response.details.type === 'management') {
         setStatusButton('error')
         setCard({
           title: `Montant trop petit`,
-          text: `Le montant alloué pour une stratégie doit être supérieur à 40 dollars, en dessous l'échange pourrait refuser de passer les orders`,
+          text: `Le montant alloué pour une stratégie doit être supérieur à 40 dollars, en dessous l'échange pourrait refuser de passer les ordres`,
           type: 'error',
           time: 15000,
         });
@@ -98,6 +100,24 @@ export default function WalletStart({
       console.log(e.message);
     }
   }
+
+    //to allow time to Binance to update data
+    useEffect(() => {
+      if(!launchRefresh) return
+      let mounted = true;
+  
+  
+      const delay = setTimeout(() => {
+        if(!mounted) return
+        setRefresh(count => ++count);
+      }, 1000)
+  
+      return () => {
+        mounted = false
+        setLaunchRefresh(false)
+        clearTimeout(delay)
+      }
+    }, [launchRefresh, setRefresh])
 
   function exchangeInvalid() {
     startButtonRef.current.classList.add(styles.not);
