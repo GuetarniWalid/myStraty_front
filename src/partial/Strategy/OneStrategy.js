@@ -17,8 +17,10 @@ export default function OneStrategy({ strategy, dispatchAllocatedAmounts, Alloca
   const {darkMode} = useContext(DarkContext)
 
   useEffect(() => {
+    let mounted = true;
     async function isStrategyStarted() {
       try {
+        if(!mounted) return
         const json = await execute(`${process.env.REACT_APP_URL_BACK}/api/v1/strategies/user/${strategy.strategy}`);
         setUserStrategy(json.userStrategy);
         setSrategyStarted(json.started);
@@ -28,6 +30,8 @@ export default function OneStrategy({ strategy, dispatchAllocatedAmounts, Alloca
       }
     }
     isStrategyStarted();
+
+    return () => mounted = false
     // eslint-disable-next-line
   }, [strategy]);
 

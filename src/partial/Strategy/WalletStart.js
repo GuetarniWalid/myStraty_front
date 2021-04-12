@@ -20,7 +20,6 @@ export default function WalletStart({
   changeExchange,
 }) {
   const [warn, setWarn] = useState(false)
-  const [launchRefresh, setLaunchRefresh] = useState(false)
   const [statusButton, setStatusButton] = useState('idle')
   const { setCard } = useContext(AlertContext);
   const startButtonRef = useRef();
@@ -77,7 +76,9 @@ export default function WalletStart({
           time: 15000,
         });
         //set a timout to allow time to Binance to update data
-        setLaunchRefresh(true)
+        setTimeout(() => {
+          setRefresh(count => ++count);
+        }, 1000)
       }
       else if(!response.success && response.details.type === 'management') {
         setStatusButton('error')
@@ -101,23 +102,6 @@ export default function WalletStart({
     }
   }
 
-    //to allow time to Binance to update data
-    useEffect(() => {
-      if(!launchRefresh) return
-      let mounted = true;
-  
-  
-      const delay = setTimeout(() => {
-        if(!mounted) return
-        setRefresh(count => ++count);
-      }, 1000)
-  
-      return () => {
-        mounted = false
-        setLaunchRefresh(false)
-        clearTimeout(delay)
-      }
-    }, [launchRefresh, setRefresh])
 
   function exchangeInvalid() {
     startButtonRef.current.classList.add(styles.not);
