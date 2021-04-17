@@ -41,10 +41,12 @@ export default function constructTooltipLineChart(tooltipModel, dataAsset, darkM
       const leftSpan = `<span>${legend} ${legendName}</span>`;
 
       const priceFormated =
-        unit === 'day'
-          ? String(dataAsset[currency].valuesByDay[tooltipModel.dataPoints[0].index]).substring(0, 7)
-          : String(dataAsset[currency].valuesByMonth[tooltipModel.dataPoints[0].index]).substring(0, 7);
-
+      unit === 'day'
+      ? String(dataAsset[currency].valuesByDay[tooltipModel.dataPoints[0].index]).substring(0, 7)
+      : unit === 'week' ?
+      String(dataAsset[currency].valuesByWeek[tooltipModel.dataPoints[0].index]).substring(0, 7) 
+      : String(dataAsset[currency].valuesByMonth[tooltipModel.dataPoints[0].index]).substring(0, 7) 
+      
       const element = `<p class='tooltipBody ${darkMode ? 'tooltipBodyDark' : null}'>${leftSpan}<span>${sign}${priceFormated}</span></p>`;
       tooltipEl.innerHTML += element;
     }

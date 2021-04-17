@@ -88,16 +88,16 @@ export default function useFormatDoughnutData() {
           //for Euro, data is converted directly from usdt with rate.EURUSDT
           name: 'Euro',
           value: {
-            btc: data.usdt / rate.BTCUSDT / rate.EURUSDT,
-            eth: data.usdt / rate.ETHUSDT / rate.EURUSDT,
+            btc: data.usdt / rate.BTCUSDT,
+            eth: data.usdt / rate.ETHUSDT,
             eur: data.usdt / rate.EURUSDT,
           },
           color: 'rgba(123,158,113,1)',
           sign: '€',
         };
       } else {
-        formatDataAllStrategies.eur.value.btc += data.usdt / rate.BTCUSDT / rate.EURUSDT;
-        formatDataAllStrategies.eur.value.eth += data.usdt / rate.ETHUSDT / rate.EURUSDT;
+        formatDataAllStrategies.eur.value.btc += data.usdt / rate.BTCUSDT;
+        formatDataAllStrategies.eur.value.eth += data.usdt / rate.ETHUSDT;
         formatDataAllStrategies.eur.value.eur += data.usdt / rate.EURUSDT;
       }
     });

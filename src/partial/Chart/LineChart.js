@@ -37,7 +37,7 @@ export default function LineChart({ timeIntervalPortfolio }) {
       //to avoid states change if the component is unmonted
       if (!mounted) return;
 
-      const data = formatDatas(amountsByDate, jsonRateEur, timeIntervalPortfolio, !enoughDatas);
+      const data = formatDatas(amountsByDate, jsonRateEur);
       const context = chartRef.current.getContext('2d');
       //In first render and if user does not have enough datas we display a fake lineChart
       chartStored.current = lineChart(currency, context, data, timeIntervalPortfolio, !enoughDatas, darkMode);
@@ -120,7 +120,7 @@ export default function LineChart({ timeIntervalPortfolio }) {
     return jsonRateEur;
   }
 
-  function formatDatas(amountsByDate, jsonRateEur, timeInterval, displayFakeData) {
+  function formatDatas(amountsByDate, jsonRateEur) {
     //manipulation of data to format one object "dataAsset"
     let labelsByDay = [];
     let labelsByWeek = [];

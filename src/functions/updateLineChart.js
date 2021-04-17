@@ -1,42 +1,34 @@
-import {formatNumber, formatCurrency} from '../functions/various'
+import { formatNumber, formatCurrency } from '../functions/various';
 
-export async function updateLineChart(chart, lineChartData, timeInterval, currency, enoughDatas, darkMode) {
-  let eur;
-  let btc;
-  let eth;
+export async function updateLineChart(chart, lineChartData, timeInterval, currency, enoughDatas) {
+  let valueByTime;
+  let labelsByTime;
+  let time;
   //For timeInterval change
   switch (timeInterval) {
     case '1J':
-      eur = lineChartData.eur.valuesByDay;
-      btc = lineChartData.btc.valuesByDay;
-      eth = lineChartData.eth.valuesByDay;
-
-      //change lineChart with new value
-      chart.data.labels = lineChartData.labelsByDay;
-      chart.options.scales.xAxes[0].time.unit = 'day';
+      valueByTime = 'valuesByDay'
+      labelsByTime = 'labelsByDay'
+      time = 'day'
       break;
     case '1S':
-      eur = lineChartData.eur.valuesByWeek;
-      btc = lineChartData.btc.valuesByWeek;
-      eth = lineChartData.eth.valuesByWeek;
-
-      //change lineChart with new value
-      chart.data.labels = lineChartData.labelsByWeek;
-      chart.options.scales.xAxes[0].time.unit = 'week';
+      valueByTime = 'valuesByWeek'
+      labelsByTime = 'labelsByWeek'
+      time = 'week'
       break;
     default:
-      eur = lineChartData.eur.valuesByMonth;
-      btc = lineChartData.btc.valuesByMonth;
-      eth = lineChartData.eth.valuesByMonth;
-
-      //change lineChart with new value
-      chart.data.labels = lineChartData.labelsByMonth;
-      chart.options.scales.xAxes[0].time.unit = 'month';
+      valueByTime = 'valuesByMonth'
+      labelsByTime = 'labelsByMonth'
+      time = 'month'
       break;
   }
 
-  //For currency changes
-  chart.data.datasets[0].data = currency === 'eur' ? eur : currency === 'btc' ? btc : eth;
+  //For currency changes and date
+  chart.data.datasets[0].data = lineChartData[currency][valueByTime];
+  chart.data.labels = lineChartData[labelsByTime];
+  chart.options.scales.xAxes[0].time.unit = time;
+  
+
   chart.data.datasets[0].borderColor = !enoughDatas ? 'rgb(233, 240, 251)' : currency === 'eur' ? 'rgba(123,158,113,1)' : currency === 'btc' ? 'rgba(255,146,1,1)' : 'rgba(57,57,57,1)';
   chart.data.datasets[0].backgroundColor = !enoughDatas
     ? 'rgb(233, 240, 251, 0.5)'
