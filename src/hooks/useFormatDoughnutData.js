@@ -1,6 +1,7 @@
 import { useCallback, useContext } from 'react';
 import useGetRatesAndDataWallet from './useGetRatesAndDataWallet';
 import { DarkContext } from '../partial/Providers';
+import Big from 'big.js'
 
 export default function useFormatDoughnutData() {
   const { darkMode } = useContext(DarkContext);
@@ -55,50 +56,50 @@ export default function useFormatDoughnutData() {
         formatDataAllStrategies.btc = {
           name: 'Bitcoin',
           value: {
-            btc: data.btc,
-            eth: data.btc / rate.ETHBTC,
-            eur: (data.btc * rate.BTCUSDT) / rate.EURUSDT,
+            btc: new Big(data.btc).round(4).toNumber(),
+            eth: new Big(data.btc).div(rate.ETHBTC).round(4).toNumber(),
+            eur: new Big(data.btc * rate.BTCUSDT).div(rate.EURUSDT).round(4).toNumber(),
           },
           color: 'rgba(255,146,1,1)',
           sign: '฿',
         };
       } else {
-        formatDataAllStrategies.btc.value.btc += data.btc;
-        formatDataAllStrategies.btc.value.eth += data.btc / rate.ETHBTC;
-        formatDataAllStrategies.btc.value.eur += (data.btc * rate.BTCUSDT) / rate.EURUSDT;
+        formatDataAllStrategies.btc.value.btc = new Big(formatDataAllStrategies.btc.value.btc).plus(data.btc).round(4).toNumber();
+        formatDataAllStrategies.btc.value.eth = new Big(formatDataAllStrategies.btc.value.eth).plus(new Big(data.btc).div(rate.ETHBTC).round(4).toNumber()).round(4).toNumber()
+        formatDataAllStrategies.btc.value.eur = new Big(formatDataAllStrategies.btc.value.eur).plus(new Big(data.btc * rate.BTCUSDT).div(rate.EURUSDT).round(4).toNumber()).round(4).toNumber();
       }
       if (!formatDataAllStrategies.eth) {
         formatDataAllStrategies.eth = {
           name: 'Ethereum',
           value: {
-            btc: data.eth * rate.ETHBTC,
-            eth: data.eth,
-            eur: (data.eth * rate.ETHUSDT) / rate.EURUSDT,
+            btc: new Big(data.eth * rate.ETHBTC).round(3).toNumber(),
+            eth: new Big(data.eth).round(3).toNumber(),
+            eur: new Big(new Big(data.eth * rate.ETHUSDT).div(rate.EURUSDT).round(3).toNumber()).round(3).toNumber()
           },
           color: darkMode ? '#5A5A5A' : 'rgba(57,57,57,1)',
           sign: 'Ξ',
         };
       } else {
-        formatDataAllStrategies.eth.value.btc += data.eth * rate.ETHBTC;
-        formatDataAllStrategies.eth.value.eth += data.eth;
-        formatDataAllStrategies.eth.value.eur += (data.eth * rate.ETHUSDT) / rate.EURUSDT;
+        formatDataAllStrategies.eth.value.btc = new Big(formatDataAllStrategies.eth.value.btc).plus(data.eth * rate.ETHBTC).round(3).toNumber();
+        formatDataAllStrategies.eth.value.eth = new Big(formatDataAllStrategies.eth.value.eth).plus(data.eth).round(3).toNumber();
+        formatDataAllStrategies.eth.value.eur = new Big(formatDataAllStrategies.eth.value.eur).plus(new Big(data.eth * rate.ETHUSDT).div(rate.EURUSDT).round(3).toNumber()).round(3).toNumber();
       }
       if (!formatDataAllStrategies.eur) {
         formatDataAllStrategies.eur = {
           //for Euro, data is converted directly from usdt with rate.EURUSDT
           name: 'Euro',
           value: {
-            btc: data.usdt / rate.BTCUSDT,
-            eth: data.usdt / rate.ETHUSDT,
-            eur: data.usdt / rate.EURUSDT,
+            btc: new Big(data.usdt).div(rate.BTCUSDT).round(2).toNumber(),
+            eth: new Big(data.usdt).div(rate.ETHUSDT).round(2).toNumber(),
+            eur: new Big(data.usdt).div(rate.EURUSDT).round(2).toNumber(),
           },
           color: 'rgba(123,158,113,1)',
           sign: '€',
         };
       } else {
-        formatDataAllStrategies.eur.value.btc += data.usdt / rate.BTCUSDT;
-        formatDataAllStrategies.eur.value.eth += data.usdt / rate.ETHUSDT;
-        formatDataAllStrategies.eur.value.eur += data.usdt / rate.EURUSDT;
+        formatDataAllStrategies.eur.value.btc = new Big(formatDataAllStrategies.eur.value.btc).plus(new Big(data.usdt).div(rate.BTCUSDT).round(2).toNumber()).round(2).toNumber();
+        formatDataAllStrategies.eur.value.eth = new Big(formatDataAllStrategies.eur.value.eth).plus(new Big(data.usdt).div(rate.ETHUSDT).round(2).toNumber()).round(2).toNumber();
+        formatDataAllStrategies.eur.value.eur = new Big(formatDataAllStrategies.eur.value.eur).plus(new Big(data.usdt).div(rate.EURUSDT).round(2).toNumber()).round(2).toNumber();
       }
     });
 
