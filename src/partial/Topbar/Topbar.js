@@ -3,10 +3,23 @@ import { useLocation } from 'react-router-dom';
 import TopbarCurrency from './TopbarCurrency';
 import styles from './Topbar.module.css';
 import { CurrencyContext } from '../Providers';
-import TopbarSettings from './TopbarSettings';
-import useFetch from '../../hooks/useFetch';
+import { RateContext } from '../Providers';
+import { WalletContext } from '../Providers';
+import { WalletByDateContext } from '../Providers';
+import { DataByStrategyContext } from '../Providers';
+import { StrategyContext } from '../Providers';
+import { RefreshStrategyContext } from '../Providers';
+import { EnoughDatasContext } from '../Providers';
 import { LoggedInContext } from '../Providers';
 import { SubscribeContext } from '../Providers';
+import { PlanContext } from '../Providers';
+import { TesterContext } from '../Providers';
+import { UserContext } from '../Providers';
+import { LineChartDataLoad } from '../Providers';
+import { BarChartDataLoad } from '../Providers';
+import { EnoughtStratDatasContext } from '../Providers';
+import TopbarSettings from './TopbarSettings';
+import useFetch from '../../hooks/useFetch';
 import { DarkContext } from '../Providers';
 
 let title;
@@ -18,11 +31,25 @@ export default function Topbar() {
   const [mail, setMail] = useState(true);
   const location = useLocation();
   const { currency, setCurrency } = useContext(CurrencyContext);
+  const { setRate } = useContext(RateContext);
+  const { setWallet } = useContext(WalletContext);
+  const { setWalletByDate } = useContext(WalletByDateContext);
+  const { setDataByStrategy } = useContext(DataByStrategyContext);
+  const { setStrategySelected } = useContext(StrategyContext);
+  const { setRefresh } = useContext(RefreshStrategyContext);
+  const { setEnoughDatas } = useContext(EnoughDatasContext);
   const { setLoggedIn } = useContext(LoggedInContext);
   const { isSubscribe, setIsSubscribe } = useContext(SubscribeContext);
+  const { setPlan } = useContext(PlanContext);
+  const { setIsTester } = useContext(TesterContext);
+  const { setUser } = useContext(UserContext);
+  const { setLineChartDataLoaded } = useContext(LineChartDataLoad);
+  const { setBarChartDataLoaded } = useContext(BarChartDataLoad);
+  const { setEnoughStratDatas } = useContext(EnoughtStratDatasContext);
   const { darkMode } = useContext(DarkContext);
 
   const execute = useFetch();
+
 
   if (location.pathname === '/console/dashboard') {
     title = 'Dashboard';
@@ -80,8 +107,22 @@ export default function Topbar() {
   function deconnexion() {
     fetch(`/api/v1/login/logout`)
     localStorage.removeItem('token');
-    setIsSubscribe(true)
+    setCurrency('eur')
+    setRate({})
+    setWallet({})
+    setWalletByDate()
+    setDataByStrategy([])
+    setStrategySelected('TOTAL')
+    setRefresh(0)
+    setEnoughDatas(false)
     setLoggedIn(false);
+    setIsSubscribe(true)
+    setPlan()
+    setIsTester()
+    setUser({male: true})
+    setLineChartDataLoaded(false)
+    setBarChartDataLoaded(false)
+    setEnoughStratDatas(true)
   }
 
   return (

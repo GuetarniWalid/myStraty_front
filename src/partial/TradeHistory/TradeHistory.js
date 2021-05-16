@@ -60,19 +60,30 @@ export default function TradeHistory({ limit }) {
   }
 
   function handleCurrencyClick() {
-    console.log(currency);
-    if (currency === 'various') {
-      const currencyFiltered = filterCurrencyBTC(tradeRef.current);
-      setTrades(currencyFiltered);
-      setCurrency('btc');
-    } else if (currency === 'btc') {
-      const currencyFiltered = filterCurrencyETH(tradeRef.current);
-      setTrades(currencyFiltered);
-      setCurrency('eth');
-    } else {
-      setTrades(tradeRef.current);
-      setCurrency('various');
+    let currencySelected = currency
+    const possibleValue = ['various', 'btc', 'eth']
+    let indexOfCurrency = possibleValue.findIndex(item => item === currency)
+
+    let currencyFiltered = [];
+    while (!currencyFiltered.length && tradeRef.current.length) {  
+      if (currencySelected === 'various') {
+        currencyFiltered = tradeRef.current
+      } else if (currencySelected === 'btc') {
+        currencyFiltered = filterCurrencyBTC(tradeRef.current);
+      } else {
+        currencyFiltered = filterCurrencyETH(tradeRef.current);
+      }
+
+      if(!currencyFiltered.length && indexOfCurrency + 1 > 2) {
+        currencySelected = possibleValue[0]
+        indexOfCurrency = 0
+      } else {
+        currencySelected = possibleValue[indexOfCurrency + 1]
+        indexOfCurrency++
+      }
     }
+    setTrades(currencyFiltered);
+    indexOfCurrency + 1 > 2 ? setCurrency(possibleValue[0]) : setCurrency(possibleValue[indexOfCurrency + 1])
   }
 
   function convertClick() {
