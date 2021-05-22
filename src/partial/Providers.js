@@ -20,6 +20,7 @@ export const LineChartDataLoad = createContext();
 export const BarChartDataLoad = createContext();
 export const EnoughtStratDatasContext = createContext();
 export const CoverContext = createContext();
+export const NumberUnreadMessagesContext = createContext();
 
 export default function Providers({ children }) {
   const [currency, setCurrency] = useState('eur');
@@ -41,6 +42,7 @@ export default function Providers({ children }) {
   const [lineChartDataLoaded, setLineChartDataLoaded] = useState(false);
   const [barChartDataLoaded, setBarChartDataLoaded] = useState(false);
   const [coverAll, setCoverAll] = useState(false);
+  const [numberUnreadMessage, setNumberUnreadMessage] = useState();
 
   //verify the token validity of user and redirect to home if token not validate
   useEffect(() => {
@@ -89,7 +91,9 @@ export default function Providers({ children }) {
                                     <BarChartDataLoad.Provider value={{ barChartDataLoaded, setBarChartDataLoaded }}>
                                       <EnoughtStratDatasContext.Provider value={{enoughStratDatas, setEnoughStratDatas}}>
                                         <CoverContext.Provider value={{coverAll, setCoverAll}}>
-                                          {children}
+                                          <NumberUnreadMessagesContext.Provider value={{numberUnreadMessage, setNumberUnreadMessage}}>
+                                            {children}
+                                          </NumberUnreadMessagesContext.Provider>
                                         </CoverContext.Provider>
                                       </EnoughtStratDatasContext.Provider>
                                       </BarChartDataLoad.Provider>

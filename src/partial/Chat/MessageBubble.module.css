@@ -1,0 +1,116 @@
+.container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.575);
+  text-align: center;
+}
+
+.container i {
+  color: white;
+  padding: 20px 15px;
+}
+
+.left::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.575);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% + 0.6px), -50%);
+  clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+}
+
+.right::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.575);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% - 0.6px), -50%);
+  clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
+}
+
+.left {
+  right: 0;
+  animation: slideToRight 0.2s ease-out forwards;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translate(200%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(calc(100% + 20px), -50%);
+    opacity: 1;
+  }
+}
+
+.right {
+  left: 0;
+  animation: slideToLeft 0.2s ease-out forwards;
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translate(-200%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(calc(-100% - 20px), -50%);
+    opacity: 1;
+  }
+}
+
+.outLeft {
+  animation: slideLeftOut 0.2s ease-out forwards;
+}
+
+@keyframes slideLeftOut {
+  0% {
+    opacity: 1;
+    transform: translate(calc(100% + 20px), -50%);
+  }
+  100% {
+    transform: translate(200%, -50%);
+    opacity: 0;
+  }
+}
+
+.outRight {
+  animation: slideRightOut 0.2s ease-out forwards;
+}
+
+@keyframes slideRightOut {
+  0% {
+    opacity: 1;
+    transform: translate(calc(-100% - 20px), -50%);
+  }
+  100% {
+    transform: translate(-200%, -50%);
+    opacity: 0;
+  }
+}
+
+/********* MEDIA QUERY ************/
+/*********** 700px ******************/
+
+@media screen and (max-width: 390px) {
+  .left {
+    right: 5px;
+  }
+  
+  .right {
+    left: 5px;
+  }
+}
+
+

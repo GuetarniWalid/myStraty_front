@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import TopbarCurrency from './TopbarCurrency';
 import styles from './Topbar.module.css';
 import { CurrencyContext } from '../Providers';
@@ -18,6 +18,7 @@ import { UserContext } from '../Providers';
 import { LineChartDataLoad } from '../Providers';
 import { BarChartDataLoad } from '../Providers';
 import { EnoughtStratDatasContext } from '../Providers';
+import { NumberUnreadMessagesContext } from '../Providers';
 import TopbarSettings from './TopbarSettings';
 import useFetch from '../../hooks/useFetch';
 import { DarkContext } from '../Providers';
@@ -30,6 +31,7 @@ export default function Topbar() {
   const [bellActive, setBellActive] = useState(false);
   const [mail, setMail] = useState(true);
   const location = useLocation();
+  const history = useHistory()
   const { currency, setCurrency } = useContext(CurrencyContext);
   const { setRate } = useContext(RateContext);
   const { setWallet } = useContext(WalletContext);
@@ -47,9 +49,9 @@ export default function Topbar() {
   const { setBarChartDataLoaded } = useContext(BarChartDataLoad);
   const { setEnoughStratDatas } = useContext(EnoughtStratDatasContext);
   const { darkMode } = useContext(DarkContext);
+  const { setNumberUnreadMessage, numberUnreadMessage } = useContext(NumberUnreadMessagesContext);
 
   const execute = useFetch();
-
 
   if (location.pathname === '/console/dashboard') {
     title = 'Dashboard';
@@ -93,6 +95,29 @@ export default function Topbar() {
     // eslint-disable-next-line
   }, []);
 
+  //get the number of messages not read
+  useEffect(() => {
+    let mounted = true;
+    async function getNumberMessagesNotRead() {
+      try {
+        const json = await execute(`${process.env.REACT_APP_URL_BACK}/api/v1/chat/unread/number`);
+        //to avoid states change if the component is unmonted
+        if (!mounted) return;
+        if (json.success) {
+          const numberUnreadMessages = json.details.number;
+          setNumberUnreadMessage(numberUnreadMessages);
+        }
+      } catch (e) {
+        console.log(e.message);
+      }
+    }
+    getNumberMessagesNotRead();
+
+    //cleanup function
+    return () => (mounted = false);
+    // eslint-disable-next-line
+  }, []);
+
   function handleMail(e) {
     e.preventDefault();
     try {
@@ -105,24 +130,29 @@ export default function Topbar() {
   }
 
   function deconnexion() {
-    fetch(`/api/v1/login/logout`)
+    fetch(`/api/v1/login/logout`);
     localStorage.removeItem('token');
-    setCurrency('eur')
-    setRate({})
-    setWallet({})
-    setWalletByDate()
-    setDataByStrategy([])
-    setStrategySelected('TOTAL')
-    setRefresh(0)
-    setEnoughDatas(false)
+    setCurrency('eur');
+    setRate({});
+    setWallet({});
+    setWalletByDate();
+    setDataByStrategy([]);
+    setStrategySelected('TOTAL');
+    setRefresh(0);
+    setEnoughDatas(false);
     setLoggedIn(false);
-    setIsSubscribe(true)
-    setPlan()
-    setIsTester()
-    setUser({male: true})
-    setLineChartDataLoaded(false)
-    setBarChartDataLoaded(false)
-    setEnoughStratDatas(true)
+    setIsSubscribe(true);
+    setPlan();
+    setIsTester();
+    setUser({ male: true });
+    setLineChartDataLoaded(false);
+    setBarChartDataLoaded(false);
+    setEnoughStratDatas(true);
+    setNumberUnreadMessage()
+  }
+
+  function handleMessageClick() {
+    history.push('/console/communaute')
   }
 
   return (
@@ -142,14 +172,29 @@ export default function Topbar() {
       <div className={styles.right}>
         {isSubscribe && (
           <>
-            <i className='fas fa-cog' onClick={() => setSettings(true)}></i>
+            {numberUnreadMessage > 0 && location.pathname !== '/console/communaute' && (
+              <span className={styles.message} onClick={handleMessageClick} >
+                <i className='fas fa-comment'></i>
+                <span style={{
+                  right: numberUnreadMessage < 10 ? '-5px' : numberUnreadMessage < 100 ? '-9px' : '-13px',
+                  padding: numberUnreadMessage < 100 ? '2px 3px' : '2px 2px'               
+                  }} >{numberUnreadMessage}</span>
+              </span>
+            )}
+            <span>
+              <i className='fas fa-cog' onClick={() => setSettings(true)}></i>
+            </span>
             {settings && <TopbarSettings setSettings={setSettings} mail={mail} setMail={setMail} setBellActive={setBellActive} handleMail={handleMail} />}
-            <i className='fas fa-bell' onClick={handleMail}></i>
-            {/* span used for alert if user subscribed to mails */}
-            <span style={bellActive ? { background: 'green' } : { background: 'rgba(224, 84, 84, 0.75)' }}></span>
+            <span className={styles.bell}>
+              <i className='fas fa-bell' onClick={handleMail}></i>
+              {/* span used for alert if user subscribed to mails */}
+              <span style={bellActive ? { background: 'green' } : { background: 'rgba(224, 84, 84, 0.75)' }}></span>
+            </span>
           </>
         )}
-        <i onClick={deconnexion} className='fas fa-power-off'></i>
+        <span>
+          <i onClick={deconnexion} className='fas fa-power-off'></i>
+        </span>
       </div>
     </header>
   );

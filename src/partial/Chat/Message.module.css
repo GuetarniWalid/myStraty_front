@@ -23,7 +23,9 @@
   font-weight: 600;
   line-height: 30px;
   position: relative;
+  cursor: pointer;
 }
+
 
 .left {
   background: #75a861;
@@ -105,3 +107,23 @@
   color: #becae0;
 }
 
+
+/********* MEDIA QUERY ************/
+
+@media screen and (max-width: 390px) {
+  .container p {
+    min-width: 290px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container p {
+    min-width: 275px;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  .container p {
+    min-width: 240px;
+  }
+}

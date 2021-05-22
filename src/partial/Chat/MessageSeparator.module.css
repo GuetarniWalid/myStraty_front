@@ -1,0 +1,19 @@
+.p {
+    text-align: center;
+    background: #e7effc;
+    color:#3276eb;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+
+/**********************/
+/****** DARKMODE ******/
+/**********************/
+
+.p.dark {
+    color: #f3f1ff;
+    background: #2e2e3d;
+  }
+  
+  

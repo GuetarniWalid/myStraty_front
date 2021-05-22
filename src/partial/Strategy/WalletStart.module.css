@@ -69,20 +69,27 @@
     color: #3276eb;
 }
 
-.startButton {
-    background: #e7faf6;
-    color: #10b992;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-right: 10px;
+.not {
+    animation: not 0.3s linear;
 }
 
-.startButton:hover {
-    color: #0e9c7b;
-    background: #dafaf3;
+@keyframes not {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(+10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
+
+/********** MEDIA QUERY **************/
+/*************************************/
 
 @media screen and (max-width: 500px ) {
     .container>div {
@@ -101,27 +108,15 @@
     .bottomContainer {
         flex-direction: column;
     }
-    .startButton {
+
+    .bottomContainer>button:last-child {
         margin-top: 15px;
     }
 }
 
-.not {
-    animation: not 0.3s linear;
-}
-
-@keyframes not {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-10px);
-    }
-    75% {
-        transform: translateX(+10px);
-    }
-    100% {
-        transform: translateX(0);
+@media screen and (max-width: 370px ) {
+    .percentButton {
+        margin-right: 5px;
     }
 }
 

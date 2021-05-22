@@ -71,23 +71,41 @@
   position: relative;
 }
 
-.right i {
+.right>span {
+  display: inline-block;
   color: #8da0bf;
   margin: 0 9px;
   font-size: 15px;
   cursor: pointer;
 }
 
-.right span {
+.bell, .message {
+  position: relative;
+}
+
+.bell span {
   width: 7px;
   height: 7px;
   background: green;
   display: block;
   position: absolute;
-  right: calc(50% - 8px);
-  top: -2px;
+  right: calc(-2px);
+  top: 2px;
   border-radius: 50%;
-  border: 1.6px solid #fff;
+  border: 1px solid #fff;
+}
+
+.message span {
+  display: block;
+  position: absolute;
+  top: 8px;
+  font-size: 10px;
+  border-radius: 50%;
+  background: #F3F7FD;
+  color: #3276eb;
+  font-weight: bold;
+  padding: 2px 3px;
+  
 }
 
 /************************************/
@@ -98,7 +116,7 @@
     margin: 0 5px;
   }
 
-  .right i {
+  .right>span {
     margin: 0 7px;
   }
 
@@ -147,6 +165,11 @@
   color: #f3f1ff;
 }
 
-.header.dark .right span {
+.header.dark .bell span {
   border: 1.6px solid rgba(77, 77, 101, 1);
+}
+
+.header.dark .message span {
+  color: #7DB7DC;
+  background: rgb(54, 54, 73) 0%;
 }
