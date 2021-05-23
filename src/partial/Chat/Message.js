@@ -32,7 +32,7 @@ export const Message = React.forwardRef(
 
     //if message appear in the screen, update database to notif that user already read this message
     useEffect(() => {
-      if (id > lastMessageRead && onScreen) {
+      if (id > lastMessageRead && onScreen && chat) {
         setLastMessageRead(id);
         chat.emit('message', { id, userId, action: 'read' });
 
@@ -41,7 +41,7 @@ export const Message = React.forwardRef(
         setNumberUnreadMessage(messagesUnread.length);
       }
       // eslint-disable-next-line
-    }, [onScreen]);
+    }, [onScreen, chat]);
 
     //when a new message is posted, page scroll down if before last message is on screen
     useEffect(() => {
