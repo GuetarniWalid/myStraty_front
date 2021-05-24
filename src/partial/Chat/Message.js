@@ -34,7 +34,7 @@ export const Message = React.forwardRef(
     useEffect(() => {
       if (id > lastMessageRead && onScreen && chat) {
         setLastMessageRead(id);
-        chat.emit('message', { id, userId, action: 'read' });
+        chat.emit('message', { id, userId: user.id, action: 'read' });
 
         //calculate the number of messages unread
         const messagesUnread = messages.filter(message => message.id > id);

@@ -12,7 +12,6 @@ export const MessageSeparator = React.forwardRef(({lastMessage}, containerMessag
 //scroll down in fisrt render to see unread messages
 useEffect(() => {
   if(!firstRender) {
-    console.log('rescrollldown separatot');
     containerMessagesRef?.current.scroll({
       top: ref.current.offsetTop - 80,
       left: 0,
