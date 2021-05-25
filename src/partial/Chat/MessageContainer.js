@@ -93,7 +93,7 @@ export const MessageContainer = React.forwardRef(({ lastMessage, setMessages, me
         lastMessageRead={lastMessageRead}
         setLastMessageRead={setLastMessageRead}
         messages={messages}
-        isBeforeLastMessage={index === messages.length - 3}
+        isBeforeLastMessage={index === messages.length - 2}
         ref={containerMessagesRef}
       />
     );

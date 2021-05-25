@@ -53,7 +53,7 @@ export const Message = React.forwardRef(
         });
       }
       // eslint-disable-next-line
-    }, [ref, messages, onScreen]);
+    }, [messages]);
 
     function handleClick() {
       if (Number(user.id) === Number(userId)) {

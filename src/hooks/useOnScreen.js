@@ -14,7 +14,7 @@ export default function useOnScreen(ref, rootMargin = '0px', root = null) {
       {
         root,
         rootMargin,
-        threshold: 1
+        threshold: 0.5
       }
     );
 
