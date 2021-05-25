@@ -76,7 +76,12 @@ export const MessageContainer = React.forwardRef(({ lastMessage, setMessages, me
       indexLastMessageReadAttributed = true;
     }
 
-    const date = formatRelative(new Date(message.created_at), new Date(Date.now()), {
+    //by default utc date
+    let date = new Date(message.created_at)
+    //set hours in locale
+    date.setHours(date.getHours() + Math.round(date.getTimezoneOffset() / 60))
+    //format date
+    date = formatRelative(date, new Date(Date.now()), {
       locale: fr,
     });
     return (

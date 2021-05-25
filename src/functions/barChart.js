@@ -1,4 +1,6 @@
 import Chart from 'chart.js';
+import { fr } from 'date-fns/locale';
+
 
 export function barChart(context, timeData, BTCValues, ETHValues, USDTValues, error, darkMode) {
   const USDTOptions = {
@@ -97,10 +99,18 @@ export function barChart(context, timeData, BTCValues, ETHValues, USDTValues, er
         ],
         xAxes: [
           {
+            adapters: {
+              date: {
+                locale: fr,
+              },
+            },
             stacked: true,
             type: 'time',
             time: {
-              unit: 'day'
+              unit: 'day',
+              displayFormats: {
+                day: 'd MMM',
+              },
             },
             offset: true,
             gridLines: {
