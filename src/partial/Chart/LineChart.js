@@ -97,7 +97,7 @@ export default function LineChart({ timeIntervalPortfolio }) {
     //transform usdt values to eur values
     let jsonRateEur;
     try {
-      const dataRateEur = await fetch(`https://v6.exchangerate-api.com/v6/fc2686ebb0db723c81635f4c/latest/USD`);
+      const dataRateEur = await fetch(`https://v6.exchangerate-api.com/v6/${REACT_APP_EXCHANGE_RATE_API_KEY}/latest/USD`);
       jsonRateEur = await dataRateEur.json();
       //
       
