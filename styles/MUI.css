@@ -1,0 +1,11 @@
+.custom-MUI-autocomplete-popper {
+  width: 300px !important;
+  margin-bottom: 15px !important;
+}
+
+
+@media screen and (min-width: 900px) {
+  .custom-MUI-autocomplete-popper {
+    width: 350px !important;
+  }
+}

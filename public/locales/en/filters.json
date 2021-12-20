@@ -1,0 +1,14 @@
+{
+    "Filter": "Filter",
+    "action": "action",
+    "share": "share",
+    "follow": "follow",
+    "pending": "no action",
+    "subscription": "subscription",
+    "ambassador": "ambassador",
+    "tester": "tester",
+    "free period": "free",
+    "subscriber": "subscriber",
+    "unsubscriber": "unsubscriber"
+  }
+  
